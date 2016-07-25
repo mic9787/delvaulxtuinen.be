@@ -1,3 +1,4 @@
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
@@ -8,8 +9,8 @@ var sassOptions = {
   outputStyle: 'expanded'
 };
 
-var input = './resources/sass/**/*.scss';
-var output = './resources/css';
+var input = 'resources/sass/**/*.scss';
+var output = 'resources/css';
 
 //var autoprefixerOptions = {
 //  browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
@@ -38,11 +39,3 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['sass', 'watch' /*, possible other tasks... */]);
-
-gulp.task('prod', function () {
-  return gulp
-    .src(input)
-    .pipe(sass({ outputStyle: 'compressed' }))
-//    .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(gulp.dest(output));
-});

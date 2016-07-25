@@ -1,0 +1,14 @@
+.brand {
+    float: left;
+    margin: 0;
+    font-family: $fontFace-title;
+    font-size: 20px;
+    font-weight: 700;
+    > span {
+        color: $Celery;
+    }
+}
+
+.navigation {
+    float: right;
+}

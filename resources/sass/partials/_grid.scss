@@ -1,0 +1,6 @@
+.container {
+    @include outer-container();
+    @include media($mobile) {
+        @include pad(0 default);
+    }
+}

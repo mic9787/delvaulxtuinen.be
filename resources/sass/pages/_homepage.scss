@@ -1,0 +1,15 @@
+.homepage {
+    height: 100%;
+    body {
+        background: url('/resources/img/bg.jpg') no-repeat right bottom;
+        background-size: cover;
+    }
+    .brand {
+        color: $Silver;
+        background-color: rgba(109, 92, 92, .25);
+        padding: 10px 20px;
+    }
+}
+.brand-slogan {
+    max-width: rem(625);
+}
