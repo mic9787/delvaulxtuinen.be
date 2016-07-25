@@ -11,4 +11,17 @@
 
 .navigation {
     float: right;
+    padding-top: 10px;
+    a, a:link, a:visited {
+        font-size: em(14px);
+        color: white;
+        margin: 0 $gutter;
+        text-decoration: none;
+        &:last-child {
+            margin-right: 0;        
+        }
+        &:hover, &:focus, &:active {
+            text-decoration: underline;
+        }
+    }
 }
