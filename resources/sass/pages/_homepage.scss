@@ -4,10 +4,19 @@
         background: url('/resources/img/bg.jpg') no-repeat right bottom;
         background-size: cover;
     }
+    header {
+        background-color: transparent;
+    }
     .brand {
-        color: $Silver;
-        background-color: rgba(109, 92, 92, .25);
-        padding: 10px 20px;
+        a, a:link, a:visited {
+            color: $Silver;
+            background-color: rgba(109, 92, 92, .25);
+        }
+    }
+    .nav {
+        a, a:link, a:visited {
+            color: white;
+        }
     }
 }
 .brand-slogan {
