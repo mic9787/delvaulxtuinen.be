@@ -1,7 +1,9 @@
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    connect = require('gulp-connect');
+;
 //var autoprefixer = require('gulp-autoprefixer');
 
 var sassOptions = {
@@ -23,7 +25,7 @@ gulp.task('sass', function () {
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(sourcemaps.write())
 //    .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(gulp.dest(output));
+    .pipe(gulp.dest(output))
 });
 
 gulp.task('watch', function() {
@@ -38,4 +40,10 @@ gulp.task('watch', function() {
     });
 });
 
-gulp.task('default', ['sass', 'watch' /*, possible other tasks... */]);
+gulp.task('connect', function() {
+  connect.server({
+    port: 8888
+  });
+});
+
+gulp.task('default', ['connect', 'sass', 'watch']);

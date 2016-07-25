@@ -1,5 +1,8 @@
 // Bourbon neat
 $mobile: new-breakpoint(max-width 768px);
+$tabletOnly: new-breakpoint(min-width 768px max-width 996px);
+$tablet: new-breakpoint(min-width 768px);
+$desktop: new-breakpoint(min-width 996px);
 
 // Font
 $fontFace-body: 'Open Sans', sans-serif;
