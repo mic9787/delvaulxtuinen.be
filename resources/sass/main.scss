@@ -1,9 +1,8 @@
-@import "bourbon/bourbon";
-@import "neat/neat";
+@import "vendors/bourbon/bourbon";
+@import "vendors/neat/neat";
 @import "partials/normalize";
 
 @import "partials/base";
-
-body {
-    background-color: #f3fff4;
-}
+@import "partials/grid";
+@import "partials/header";
+@import "pages/homepage";

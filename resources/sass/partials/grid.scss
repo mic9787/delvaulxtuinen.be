@@ -1,0 +1,6 @@
+.container {
+    @include outer-container;
+}
+.row {
+    margin: 20px 0;
+}
