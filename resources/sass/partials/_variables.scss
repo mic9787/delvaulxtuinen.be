@@ -2,7 +2,9 @@
 $mobile:         new-breakpoint(max-width 768px);
 $tabletOnly:     new-breakpoint(min-width 768px max-width 996px);
 $tablet:         new-breakpoint(min-width 768px);
+$smallScreens:   new-breakpoint(max-width 996px);
 $desktop:        new-breakpoint(min-width 996px);
+$desktop-large:        new-breakpoint(min-width 1200px);
 
 // Font
 $fontFace-body:    'Open Sans', sans-serif;

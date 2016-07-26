@@ -1,8 +1,13 @@
 .container {
     @include outer-container();
-    @include pad(0 default);
+     @include media($smallScreens){
+        @include pad(0 default);
+    }
     &-s {
         @include outer-container(730px);
+         @include media($smallScreens){
+            @include pad(0 default);
+        }
     }
 }
 .row {
