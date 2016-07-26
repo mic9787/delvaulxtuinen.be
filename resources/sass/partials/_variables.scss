@@ -1,15 +1,16 @@
 // Bourbon neat
-$mobile: new-breakpoint(max-width 768px);
-$tabletOnly: new-breakpoint(min-width 768px max-width 996px);
-$tablet: new-breakpoint(min-width 768px);
-$desktop: new-breakpoint(min-width 996px);
+$mobile:         new-breakpoint(max-width 768px);
+$tabletOnly:     new-breakpoint(min-width 768px max-width 996px);
+$tablet:         new-breakpoint(min-width 768px);
+$desktop:        new-breakpoint(min-width 996px);
 
 // Font
-$fontFace-body: 'Open Sans', sans-serif;
-$fontFace-title: 'Montserrat', sans-serif;
+$fontFace-body:    'Open Sans', sans-serif;
+$fontFace-title:   'Montserrat', sans-serif;
 
 // Colors
-$Celery: #9FC54E;
-$Silver: #cbcbcb;
-$MineShaft: #2a2a2a;
-
+$MineShaft:    #2a2a2a;
+$Silver:       #cbcbcb;
+$CodGray:      #1a1a1a;
+$Celery:       #9FC54E;
+$Zanah:        #C8E6C9;

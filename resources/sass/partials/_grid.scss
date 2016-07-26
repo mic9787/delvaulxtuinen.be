@@ -1,4 +1,17 @@
 .container {
     @include outer-container();
     @include pad(0 default);
+    &-s {
+        @include outer-container(730px);
+    }
+}
+.row {
+    @include row();
+}
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &-highlight {
+        background-color: $Zanah;
+    }
 }

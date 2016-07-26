@@ -5,3 +5,15 @@ body {
     font-weight: 400;
     line-height: 1.5;
 }
+@include selection {
+  background-color: #c8e6c9;
+}
+// Typo
+p {
+    margin-top: em(12px);
+    margin-bottom: em(12px);
+}
+.lead {
+    color: $CodGray;
+    font: 400 20px / 34px $fontFace-body;
+}

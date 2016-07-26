@@ -1,5 +1,5 @@
-@import "partials/variables-bourbon";
 @import "vendors/bourbon/bourbon";
+@import "partials/variables-bourbon";
 @import "vendors/neat/neat";
 
 @import "partials/variables";
@@ -9,5 +9,6 @@
 @import "partials/header";
 @import "partials/hero";
 @import "partials/responsive-nav";
+@import "partials/cards";
 
 @import "pages/homepage";

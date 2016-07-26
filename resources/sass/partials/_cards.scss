@@ -1,0 +1,33 @@
+.cards-container {
+    @include outer-container();
+    .row {
+        margin-bottom: $gutter;
+    }
+    .card {
+        @include span-columns(4);
+        background-color: #ffffff;
+        border-bottom: 2px solid #c9c7c7;
+        &-img, &-block {
+            float: left;
+        }
+        &-img {
+            max-width: 145px;
+        }
+        &-block {
+            max-width: 224px;
+            padding: 25px 30px;
+        }
+        &-title {
+            color: #00796b;
+            font: 700 18px / 20px $fontFace-title;
+            text-transform: uppercase;
+            text-decoration: underline;
+            margin: 0;
+        }
+        &-text {
+            color: #727272;
+            font: 400 16px / 24px $fontFace-body;
+            margin: 0;
+        }
+    }
+}
