@@ -2,7 +2,10 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    gutil = require('gulp-util'),
+    source = require('vinyl-source-stream'),
+    browserify = require('browserify');
 ;
 //var autoprefixer = require('gulp-autoprefixer');
 
@@ -44,6 +47,23 @@ gulp.task('connect', function() {
   connect.server({
     port: 8888
   });
+});
+
+gulp.task("js", function(){
+
+    var destDir = "./resources/js/";
+
+    return browserify([
+        "./resources/js/vendors/jquery.js",
+//        "./resources/js/vendors/remodal.js",
+        "./resources/js/vendors/responsive-nav.min.js"
+    ])
+        .bundle()
+    .on('error', function(e){
+        gutil.log(e);
+    })
+        .pipe(source("plugins.js"))
+        .pipe(gulp.dest("./resources/js/"));
 });
 
 gulp.task('default', ['connect', 'sass', 'watch']);

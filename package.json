@@ -17,11 +17,14 @@
   },
   "homepage": "https://github.com/mic9787/delvaulxtuinen.be#readme",
   "devDependencies": {
+    "browserify": "^13.1.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^4.2.0",
     "gulp-livereload": "^3.8.1",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
-    "jquery-lazyload": "^1.9.7"
+    "gulp-util": "^3.0.7",
+    "jquery-lazyload": "^1.9.7",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
