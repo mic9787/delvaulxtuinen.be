@@ -1,0 +1,27 @@
+footer {
+    .hero {
+        background-image: url('/resources/img/border.jpg');
+    }
+    .credentials {
+        list-style: none;
+        text-align: center;
+        @include outer-container();
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: $gutter 0;
+        li {
+            color: $CodGray;
+            display: inline-block;
+            padding: 0 $gutter;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+            @include media($desktop) {
+                font: 400 20px / 34px $fontFace-body;
+            }
+        }
+    }
+}

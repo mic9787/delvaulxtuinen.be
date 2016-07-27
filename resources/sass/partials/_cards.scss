@@ -1,6 +1,6 @@
 .cards-container {
     @include outer-container();
-    @include pad(0 default);
+    @include pad(0 $gutter);
     @include media($desktop-large){
         padding: 0;
     }
@@ -24,7 +24,7 @@
         }
         @include media($desktop){
             @include span-columns(4);
-            &:nth-child(3n){
+            &:nth-child(3n+3){
 //                clear:right;
                     margin-right: 0;
             }
@@ -33,14 +33,12 @@
             float: left;
         }
         &-img {
-            max-width: 125px;
-            @include media($desktop-large){
-                max-width: 145px;
-            }
+            width: 40%;
+            max-width: 145px;
         }
         &-block {
-            max-width: 200px;
             padding: 10px;
+            width: 60%;
             @include media($desktop-large){
                 padding: 25px 30px;
             }
@@ -50,10 +48,11 @@
             font: 700 16px / 18px $fontFace-title;
             text-transform: uppercase;
             text-decoration: underline;
-            margin: 0;
+            margin: 0 0 5px 0;
             @include media($desktop-large){
                 font-size: 18px;
                 line-height: 20px;
+                margin: 0;
             }
         }
         &-text {
