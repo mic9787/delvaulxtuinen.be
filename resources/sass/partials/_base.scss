@@ -1,9 +1,12 @@
 body {
-    background-color: #f3fff4;
+    background-color: $c-HintofGreen;
     font-family: $fontFace-body;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
+    @include media($mobile) {
+        font-size: 14px;
+    }
 }
 @include selection {
   background-color: #c8e6c9;
@@ -14,8 +17,12 @@ p {
     margin-bottom: em(12px);
 }
 .lead {
-    color: $CodGray;
+    color: $c-CodGray;
     font: 400 20px / 34px $fontFace-body;
+    @include media($mobile) {
+        font-size: 16px;
+        line-height: 28px;
+    }
 }
 // Helpers
 .img-responsive {
@@ -27,4 +34,11 @@ p {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+// Pages
+.services .method {
+    background-image: url('/resources/img/werkwijze.png'); 
+    background-repeat: no-repeat; 
+    background-position: right 0;
+    background-size: 57%;
 }

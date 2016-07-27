@@ -7,15 +7,16 @@ $desktop:        new-breakpoint(min-width 996px);
 $desktop-large:  new-breakpoint(min-width 1200px);
 
 // Grid
-$containerSmall:    730px;
+$containerS:    730px;
 
 // Font
 $fontFace-body:    'Open Sans', sans-serif;
 $fontFace-title:   'Montserrat', sans-serif;
 
 // Colors
-$CodGray:      #1a1a1a;
-$MineShaft:    #2a2a2a;
-$Silver:       #cbcbcb;
-$Celery:       #9FC54E;
-$Zanah:        #C8E6C9; 
+$c-CodGray:      #1a1a1a;
+$c-MineShaft:    #2a2a2a;
+$c-Silver:       #cbcbcb;
+$c-Celery:       #9FC54E;
+$c-Zanah:        #C8E6C9; 
+$c-HintofGreen:  #f3fff4;

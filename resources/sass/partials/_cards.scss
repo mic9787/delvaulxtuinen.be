@@ -13,20 +13,28 @@
     .card {
         background-color: #ffffff;
         border-bottom: 2px solid #c9c7c7;
-        margin-bottom: $gutter;
         @include clearfix;
+        @include media($mobile){
+            &:not(:last-child) {
+                margin-bottom: $gutter;
+            }
+        }
         @include media($tabletOnly){
             @include span-columns(6);
             &:nth-child(2n){
-//                clear:right;
-                    margin-right: 0;
+                  margin-right: 0;
+            }
+            &:nth-child(2n):not(:last-child){
+                margin-bottom: $gutter;
             }
         }
         @include media($desktop){
             @include span-columns(4);
             &:nth-child(3n+3){
-//                clear:right;
-                    margin-right: 0;
+                margin-right: 0;
+            }
+            &:nth-child(3n):not(:last-child){
+                margin-bottom: $gutter;
             }
         }
         &-img, &-block {
@@ -37,7 +45,7 @@
             max-width: 145px;
         }
         &-block {
-            padding: 10px;
+            padding: 12px 15px;
             width: 60%;
             @include media($desktop-large){
                 padding: 25px 30px;
@@ -45,7 +53,7 @@
         }
         &-title {
             color: #00796b;
-            font: 700 16px / 18px $fontFace-title;
+            font: 700 18px / 20px $fontFace-title;
             text-transform: uppercase;
             text-decoration: underline;
             margin: 0 0 5px 0;

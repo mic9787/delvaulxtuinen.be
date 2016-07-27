@@ -1,5 +1,6 @@
 .hero {
     background-size: cover;
+//    background-attachment: fixed;
     background-position: center 0;
     text-align: center;
     @include media($tablet){
@@ -17,8 +18,14 @@
         margin: 0;
         padding-top: 175px;
         border-bottom: 4px solid white;
+        @include media($mobile){
+            font-size: 40px;
+            border-bottom-width: 3px;
+            padding-top: 12%;
+            margin-bottom: 12%;
+        }
     }
 }
-.diensten main .hero {
+.services main .hero {
     background-image: url('/resources/img/hero.jpg');
 }

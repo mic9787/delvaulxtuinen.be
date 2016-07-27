@@ -11,10 +11,10 @@
     a, a:link, a:visited {
         display: block;
         padding: 10px 20px;
-        color: $Silver;
+        color: $c-Silver;
         text-decoration: none;
             > span {
-            color: $Celery;
+            color: $c-Celery;
         }
     }
     
@@ -36,7 +36,7 @@
         font-size: em(14px);
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        color: $MineShaft;
+        color: $c-MineShaft;
         padding: 10px 0;
         margin: 0 $gutter;
         &:last-child {
