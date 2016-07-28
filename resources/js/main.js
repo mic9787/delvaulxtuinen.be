@@ -1,3 +1,5 @@
+$(document).ready(function () {
+  //your code here
 var headerComponent = 'http://localhost:8888/resources/html/components/header.html';
 
 $( document ).ajaxComplete(function( event, xhr, settings ) {
@@ -9,7 +11,6 @@ $( document ).ajaxComplete(function( event, xhr, settings ) {
 });
 
 // DEV only
-$(function () {
     // header
     jQuery.get("resources/html/components/header.html", function (result) {
         jQuery("#header-placeholder").replaceWith(result);

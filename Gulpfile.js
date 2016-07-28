@@ -4,9 +4,8 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     connect = require('gulp-connect'),
     gutil = require('gulp-util'),
-    source = require('vinyl-source-stream'),
-    browserify = require('browserify');
-;
+    source = require('vinyl-source-stream');
+//    browserify = require('browserify');
 //var autoprefixer = require('gulp-autoprefixer');
 
 var sassOptions = {
@@ -49,21 +48,21 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task("js", function(){
-
-    var destDir = "./resources/js/";
-
-    return browserify([
-        "./resources/js/vendors/jquery.js",
+//gulp.task("js", function(){
+//
+//    var destDir = "./resources/js/";
+//
+//    return browserify([
+////        "./resources/js/vendors/jquery-1.12.4.min.js",
 //        "./resources/js/vendors/remodal.js",
-        "./resources/js/vendors/responsive-nav.min.js"
-    ])
-        .bundle()
-    .on('error', function(e){
-        gutil.log(e);
-    })
-        .pipe(source("plugins.js"))
-        .pipe(gulp.dest("./resources/js/"));
-});
+//        "./resources/js/vendors/responsive-nav.min.js"
+//    ])
+//    .bundle()
+//    .on('error', function(e){
+//        gutil.log(e);
+//    })
+//    .pipe(source("plugins.js"))
+//    .pipe(gulp.dest("./resources/js/"));
+//});
 
 gulp.task('default', ['connect', 'sass', 'watch']);

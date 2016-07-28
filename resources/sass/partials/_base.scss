@@ -40,5 +40,6 @@ p {
     background-image: url('/resources/img/werkwijze.png'); 
     background-repeat: no-repeat; 
     background-position: right 0;
-    background-size: 57%;
+    background-size: contain;
+    min-height: 320px;
 }
