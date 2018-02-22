@@ -1,0 +1,38 @@
+{
+  "name": "delvaulxtuinen.be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mic9787/delvaulxtuinen.be.git"
+  },
+  "author": "Michael Delvaulx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mic9787/delvaulxtuinen.be/issues"
+  },
+  "homepage": "https://github.com/mic9787/delvaulxtuinen.be#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-deporder": "^1.1.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-order": "^1.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.12.1",
+    "gulp-strip-debug": "^2.0.0",
+    "gulp-uglify": "^3.0.0",
+    "itcss-easy": "^1.0.4",
+    "sassdoc": "^2.5.0"
+  }
+}

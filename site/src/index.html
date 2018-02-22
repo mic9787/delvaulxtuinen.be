@@ -1,0 +1,147 @@
+<!doctype html>
+<html class="no-js" lang="" id="home">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Delvaulx Tuinen</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="css/delvaulxtuinen.css">
+</head>
+
+<body>
+    <div id="s-container" class="s-container">
+
+        <div class="s-pusher">
+          <div class="s-content">
+              <div class="s-content-inner">
+                  <div class="container">
+                      <h1 class="brand"><a href="./"><span>Delvaulx</span>&nbsp;Tuinen</a></h1>
+                      <h2 class="lead">Delvaulx Tuinen is een onderneming die gespecialiseerd is in het aanleggen en onderhouden van tuinen, zowel voor particulieren als voor bedrijven.</h2>
+                      <button type="button" class="btn-primary" id="s-btn">Offerte aanvragen</button>
+                      <div class="ctas">
+                        <a href="tel:+32472881850" class="callme">0472 88 18 50</a>
+                        <a href="mailto:matthiasdelvaulx@delvaulxtuinen.com" class="mailme">matthias@delvaulxtuinen.com</a>
+                      </div>
+                  </div> <!-- .container -->
+              </div> <!-- .s-content-inner -->
+              <footer class="footer">
+                <a href="tel:0472881850" class="callme">0472 88 18 50</a>
+              </footer>
+          </div> <!-- .s-content -->
+            <div class="sidebar">
+                <button type="button" name="button" id="jsclose" class="icon-cross close"></button>
+                <form name="form" class="form" id="offer">
+                  <section class="form-section">
+                    <h2 class="form-title">Offerte</h2>
+                    <p>Vraag vrijblijvend een offerte aan. Lorem ipsum dolor sit amet, consectetur adipisic elit. Delectus et doloremque vero eius eos sed illo, nemo maxime nobis porro is tempo.</p>
+                  </section>
+                    <!-- <h4 class="form-group-label">Contact gegevens:</h4> -->
+                    <section class="form-section">
+                      <h4 class="form-group-label">Werkzaamheden:</h4>
+                      <div class="form-group">
+                          <input type="radio" name="type" id="aanleg" value="aanleg" required class="radiobtn">
+                          <label for="aanleg">Aanleg</label>
+                    </div>
+                    <div class="form-group">
+
+                          <input type="radio" name="type" id="onderhoud" value="onderhoud" required class="radiobtn">
+                          <label for="onderhoud">Onderhoud</label>
+                      </div>
+                      <div class="form-group">
+                          <input type="radio" name="type" id="renovatie" value="renovatie" required class="radiobtn">
+                          <label for="renovatie">Renovatie</label>
+                      </div>
+                    </section>
+                    <!-- <hr class="form-hr" /> -->
+                    <section class="form-section">
+                      <div class="form-group">
+                          <h4 class="form-group-label">Oppervlakte:</h4>
+                          <input type="radio" name="acreage" id="a0" required class="radiobtn">
+                          <label for="a0">0 - 50m2</label>
+                      </div>
+                      <div class="form-group">
+                          <input type="radio" name="acreage" id="a1" required class="radiobtn">
+                          <label for="a1">50-100m2</label>
+                      </div>
+                      <div class="form-group">
+                          <input type="radio" name="acreage" id="a2" required class="radiobtn"><label for="a2">100-200m2</label>
+                      </div>
+                      <div class="form-group">
+                          <input type="radio" name="acreage" id="a3" required class="radiobtn">
+                          <label for="a3">0-300m2</label>
+                      </div>
+                      <div class="form-group">
+
+                          <input type="radio" name="acreage" id="a4" required class="radiobtn">
+                          <label for="a4">+300m2</label>
+                      </div>
+                    </section>
+                    <!-- <hr class="form-hr" /> -->
+                    <section class="form-section">
+                      <div class="form-group">
+                        <label class="form-label" for="message">Beschrijving:</label>
+                          <textarea name="message" id="message" required class="form-textarea"></textarea>
+                      </div>
+                    </section>
+                    <!-- <hr class="form-hr" /> -->
+                    <section class="form-section input-txt-group">
+
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="name" required autofocus>
+                        <label class="form-label" for="name">Naam:</label>
+                        <span class="focus-border"></span>
+                        <span class="icon icon-user"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="adres" required>
+                        <label class="form-label" for="adres">stad:</label>
+                        <span class="focus-border"></span>
+                        <span class="icon icon-location"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="phone" required>
+                        <label class="form-label" for="phone">Tel:</label>
+                        <span class="focus-border"></span>
+                        <span class="icon icon-phone"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" id="email" required>
+                        <label class="form-label" for="email">E-mail:</label>
+                        <span class="focus-border"></span>
+                        <span class="icon icon-envelop"></span>
+                    </div>
+                    <!-- <div class="form-group">
+                        <input type="text" class="form-input" id="company">
+                        <label class="form-label" for="company">Bedrijf:</label>
+                        <span class="focus-border"></span>
+                        <span class="icon icon-office"></span>
+                    </div> -->
+                  </section>
+                  <section class="form-section">
+
+
+
+                    <div class="form-group">
+                        <button type="button" id="btn-submit" class="btn-secondary btn-block">versturen</button>
+                    </div>
+
+                    <div class="alert alert-invalid hidden" id="alert">Vul alle velden in aub en check of je email correct is ingevuld.</div>
+                    <div class="alert alert-valid hidden">Je gegevens zijn verzonden</div>
+                  </section>
+
+                </form>
+            </div> <!-- .sidebar -->
+
+
+        </div> <!-- .s-pusher -->
+    </div><!-- .s-container -->
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

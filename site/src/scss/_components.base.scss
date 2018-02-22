@@ -1,0 +1,204 @@
+html {
+    box-sizing: border-box;
+    @include breakpoint(max-width 350px) {
+      font-size: 12px;
+    }
+}
+
+* {
+    &,
+    &:after,
+    &:before {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    background-color: color(body-bg);
+    color: color(text);
+}
+// Brand
+
+.brand {
+    display: inline-block;
+    margin: 0;
+
+    #{$a-tag} {
+        padding: 20px;
+        font-family: $font-family-serif;
+        font-weight: 700;
+        @include fontSize(16px);
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 1;
+        background-color: color(brown);
+        color: color(gray);
+        transition: background ease-in 485ms;
+
+        span:first-child {
+            color: color(green);
+        }
+
+        #{$hoverstate} {
+            background: transparent;
+            transition: background ease-in 285ms;
+        }
+    }
+}
+// Grid
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 40px;
+    @include clearfix();
+    @include breakpoint($screen-md) {
+        max-width: calculateRem(960px);
+    }
+    @include breakpoint($screen-lg) {
+        max-width: calculateRem(1140px);
+        padding: 0 20px;
+    }
+}
+// Typography
+
+.lead {
+    color: white;
+    font-weight: 700;
+    @include fontSize(23px);
+    line-height: 1.4;
+    margin: calculateRem(80px) 0 calculateRem(30px);
+    @include breakpoint($screen-sm) {
+        @include fontSize(30px);
+        line-height: calculateRem(40px);
+        margin: calculateRem(175px) 0 calculateRem(60px);
+        // max-width: calculateRem(650px);
+        max-width: calculateRem(840px);
+    }
+}
+
+.ctas {
+  @include breakpoint($screen-sm) {
+    display: inline-block;
+    min-width: 400px;
+    margin-left: 20px;
+  }
+  a:link, a:visited {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+
+    @include breakpoint($screen-sm) {
+      position: relative;
+      margin-top: 0;
+    }
+    &:before {
+      @extend %icomoon;
+      padding-right: 7px;
+  }
+  // #{$hoverstate} {
+  //   &:before {
+  //
+  //   }
+  // }
+}
+}
+.callme {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  top: 10px;
+  &:before {
+    content: $icon-phone;
+  }
+}
+.mailme {
+  top: 14px;
+  &:before {
+    content: $icon-envelop;
+  }
+}
+// .btn-primary + p.callme {
+//   width: 278px;
+//   text-align: center;
+// }
+.btn-primary + .callme {
+  padding-left: 0;
+  margin-top: calculateRem(20px);
+  margin-bottom: calculateRem(20px);
+  display: block;
+  text-align: center;
+  @include breakpoint($screen-sm) {
+    margin: 0;
+    padding-left: 15px;
+    text-align: left;
+    display: inline-block;
+  }
+}
+.footer {
+  display: none;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  .callme {
+    &:before {
+      @extend %icomoon;
+      padding-right: 7px;
+    }
+    display: block;
+    text-align: right;
+    padding-right: $gutter;
+  }
+}
+.sidebar-open  {
+  .footer {
+    display: block;
+  }
+}
+// Buttons
+
+.btn-primary {
+    @include button-variant(#fff, #fff, #fff)
+    @include BgHexRgba(#fff, .25);
+}
+
+.btn-secondary {
+    @include button-variant(color(black), transparent, color(black))
+}
+
+.btn-block {
+    width: 100%;
+}
+// Pages
+
+#home {
+    body {
+        background-image: url("../img/bg.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .brand {
+        #{$a-tag} {
+            @include BgHexRgba(color(brown), 0.25);
+        }
+    }
+}
+// contact.html
+#contact {
+    height: 100%;
+
+    body {
+        background-color: #3b3f45;
+    }
+
+    .container,
+    body {
+        height: 100%;
+    }
+}

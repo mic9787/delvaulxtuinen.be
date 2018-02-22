@@ -1,0 +1,53 @@
+<form name="form" class="form" id="offer">
+  <div class="form-group">
+    <input type="text" class="form-input" id="name" required>
+    <label class="form-label" for="name">Naam:</label>
+    <span class="focus-border"></span>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-input" id="adres" required>
+    <label class="form-label" for="adres">stad:</label>
+    <span class="focus-border"></span>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-input" id="phone" required>
+    <label class="form-label" for="phone">Tel:</label>
+    <span class="focus-border"></span>
+  </div>
+  <div class="form-group">
+    <input type="email" class="form-input" id="email" required>
+    <label class="form-label" for="email">E-mail:</label>
+    <span class="focus-border"></span>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-input" id="company">
+    <label class="form-label" for="company">Bedrijf:</label>
+    <span class="focus-border"></span>
+  </div>
+  <div class="form-group">
+    <p>omschrijving werkzaamheden:</p>
+    <input type="radio" name="type" id="" value="aanleg" required>aanleg
+    <input type="radio" name="type" id="" value="onderhoud" required>onderhoud
+    <input type="radio" name="type" id="" value="renovatie" required>renovatie
+  </div>
+  <div class="form-group">
+    <p>oppervlakte tuin:</p>
+    <input type="radio" name="acreage" id="" required>0 - 50m2
+    <input type="radio" name="acreage" id="" required>50-100m2
+    <input type="radio" name="acreage" id="" required>100-200m2
+    <input type="radio" name="acreage" id="" required>200-300m2
+    <input type="radio" name="acreage" id="" required>+300m2
+  </div>
+  <div class="form-group">
+    <textarea name="message" id="message" required></textarea>
+    <label class="form-label" for="message">Beschrijving:</label>
+  </div>
+
+  <div class="form-group">
+    <button type="button" id="btn-submit" class="btn">versturen</button>
+  </div>
+
+  <div class="alert alert-invalid hidden" id="alert">Vul alle velden in aub en check of je email correct is ingevuld.</div>
+  <div class="alert alert-valid hidden">Je gegevens zijn verzonden</div>
+
+</form>

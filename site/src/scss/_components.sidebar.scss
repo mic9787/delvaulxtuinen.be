@@ -1,0 +1,101 @@
+html, body, .s-container, .s-pusher, .s-content {
+  height: 100%;
+}
+
+.s-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.s-content {
+  overflow-y: auto;
+}
+
+.s-content,
+.s-content-inner {
+	position: relative;
+}
+
+.s-pusher {
+	position: relative;
+	left: 0;
+	z-index: 99;
+	height: 100%;
+	transition: transform $animationSpeed;
+  &:after {
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+    @include size(0, 0);
+  	background: rgba(0,0,0,0.2);
+  	content: '';
+  	opacity: 0;
+  	transition: opacity $animationSpeed, width 0.1s $animationSpeed, height 0.1s $animationSpeed;
+  }
+}
+
+.sidebar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 100;
+	visibility: hidden;
+  @include size(100%, 100%);
+  @include breakpoint($screen-sm) {
+    @include size($sidebarWidth, 100%);
+  }
+	// background: white;
+  background-color: color(trendyPink);
+  font-weight: 600;
+	transition: all $animationSpeed;
+  transform: translate3d(100%, 0, 0);
+  overflow-y: auto;
+  // border-left: 2px solid color(black);
+  &:after {
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+    @include size(100%, 100%);
+  	background: rgba(0,0,0,0.2);
+  	content: '';
+  	opacity: 1;
+  	transition: opacity $animationSpeed;
+  }
+  &-open {
+    .sidebar {
+    	visibility: visible;
+    	transition: transform $animationSpeed;
+      &:after {
+        @include size(0, 0);
+        opacity: 0;
+        transition: opacity $animationSpeed, width 0.1s $animationSpeed, height 0.1s $animationSpeed;
+      }
+    }
+    .s-pusher {
+    	transform: translate3d(-100%, 0, 0);
+      @include breakpoint($screen-sm) {
+        transform: translate3d(-$sidebarWidth, 0, 0);
+      }
+      &:after {
+        @include size(100%, 100%);
+      	opacity: 1;
+      	transition: opacity $animationSpeed;
+      }
+    }
+  }
+}
+
+.close {
+  color: color(black);
+  position: absolute;
+  right:  1.5rem;
+  top:  1.5rem;
+  @include unstyledButton();
+  line-height: 1;
+  opacity: .4;
+  transition: opacity .2s ease-in;
+  @include hardware();
+  #{$hoverstate} {
+    opacity: 1;
+  }
+}

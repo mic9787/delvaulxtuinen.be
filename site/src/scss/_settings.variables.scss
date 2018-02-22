@@ -1,0 +1,97 @@
+// Colors
+$colors:(
+  text:       #121212,
+  black:      #32192B,
+  gray:       #cbcbcb,
+  lightGray:  #eaeaea,
+  darkGray:   darken(#cbcbcb, 20%),
+  green:      #9fc54e,
+  brown:      #6d5c5c,
+  whitish:    #f0f1ed,
+  body-bg:    #fff,
+  error:      red,
+  trendyPink: #8B5D90,
+  voodoo:    #644268
+
+);
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+// Fonts
+$font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
+$font-family-serif:       "Montserrat", Georgia, serif;
+
+// Link
+$link-color:            color(green);
+$link-hover-color:      darken($link-color, 15%);
+$link-hover-decoration: none;
+$a-tag:                'a:link, a:visited'; // #{$a-tag}
+$hoverstate:            '&:active, &:hover, &:focus'; // #{$hoverstate}
+
+$border-radius-base:        4px;
+$border-radius-large:       10px !default;
+$border-radius-small:       4px !default;
+
+// Paddings
+$gutter:   2rem;
+
+$padding-base-vertical:     10px;
+$padding-base-horizontal:   16px;
+
+$padding-large-vertical:    12px;
+$padding-large-horizontal:  16px;
+
+// Media queries
+$screen-sm:  600px;
+$screen-md:  960px;
+$screen-lg:  1140px;
+
+// Sidebar
+$sidebarWidth:  420px;
+$animationSpeed:  325ms;
+
+// fonticon
+$icomoon-font-path: "../fonts";
+$icon-office: "\e903";
+$icon-phone: "\e942";
+$icon-envelop: "\e945";
+$icon-location: "\e947";
+$icon-user: "\e971";
+$icon-briefcase: "\e9ae";
+$icon-cross: "\ea0f";
+$icon-checkmark: "\ea10";
+$icon-checkbox-checked: "\ea52";
+$icon-checkbox-unchecked: "\ea53";
+$icon-radio-checked: "\ea55";
+$icon-radio-unchecked: "\ea56";
+
+// Form elements
+// $form: (
+//   background: color(body-bg),
+//   label-color: color(black),
+//   label-color-focus: color(darkGray),
+//   error-color: color(error),
+//   placeholder-color: color(gray),
+//   success-color: #5C832F,
+//   padding: 8px 0,
+//   border: 1px solid color(lightGray),
+//   border-bottom: 1px solid color(gray),
+//   radius: $border-radius-base
+// );
+// @function form($key) {
+//   @return map-get($form, $key);
+// }
+// sidebar theming
+// $sidebar: (
+//   light: (
+//     bg: rgba(255, 255, 255, 0.95),
+//   ),
+//   dark: (
+//     bg: #8B5D90, //#5dbcac
+//     fontWeight: 600,
+//   )
+// );
+// @function sidebartheme($theme, $theme-prop) {
+//   // map inception
+//   @return map-get(map-get($sidebar, $theme), $theme-prop);
+// }
