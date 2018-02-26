@@ -82,15 +82,31 @@ $icon-radio-unchecked: "\ea56";
 //   @return map-get($form, $key);
 // }
 // sidebar theming
-// $sidebar: (
-//   light: (
-//     bg: rgba(255, 255, 255, 0.95),
-//   ),
-//   dark: (
-//     bg: #8B5D90, //#5dbcac
-//     fontWeight: 600,
-//   )
-// );
+$sidebar: (
+  light: (
+    bg: #f5e6ff,
+    bgTextarea: rgba(101, 67, 105, 0.05),
+    inputBorderColor: color(black),
+    focusBorder: color(voodoo),
+    labelColor: color(black),
+    iconColor: color(black),
+    iconFocusColor: color(voodoo)
+  ),
+  dark: (
+    // bg: color(voodoo),
+    bg: color(trendyPink),
+    bgTextarea: #7e5583, //color(voodoo)
+    inputBorderColor: color(voodoo),
+    focusBorder: color(black),
+    labelColor: color(black),
+    iconColor: color(voodoo),
+    iconFocusColor: color(black)
+  )
+);
+@function theme($theme, $theme-prop) {
+  @return map-get(map-get($sidebar, $theme), $theme-prop);
+}
+
 // @function sidebartheme($theme, $theme-prop) {
 //   // map inception
 //   @return map-get(map-get($sidebar, $theme), $theme-prop);

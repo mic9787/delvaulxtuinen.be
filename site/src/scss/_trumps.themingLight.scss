@@ -1,0 +1,30 @@
+// sidebar
+.sidebar {
+  // // background-color: color(trendyPink);
+  // background-color: #f5e6ff;
+  background-color: theme(light, bg);
+}
+// form elements
+.form {
+  &-input {
+    border-color: theme(light, inputBorderColor);
+    &:focus ~ [class^="icon-"], &:focus ~ [class*=" icon-"] ,
+    &:valid ~ [class^="icon-"], &:valid ~ [class*=" icon-"] {
+        color: theme(light, iconFocusColor);
+    }
+    ~ label {
+      color: theme(light, labelColor);
+    }
+    ~ .focus-border {
+      background-color: theme(light, focusBorder);
+    }
+  }
+  &-textarea {
+    background-color: theme(light, bgTextarea);
+  }
+  &-group {
+      [class^="icon-"], [class*=" icon-"] {
+          color: theme(light, iconColor);
+      }
+    }
+}

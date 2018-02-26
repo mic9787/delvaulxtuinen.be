@@ -10,7 +10,7 @@ input:-webkit-autofill {
     &-input {
         padding: 4px 0 8px;
         border: 0;
-        border-bottom: 2px solid color(voodoo);
+        border-bottom: 2px solid;
         background-color: transparent;
         outline: 0;
         width: 100%;
@@ -30,10 +30,7 @@ input:-webkit-autofill {
         // &:focus:invalid ~ label {
         //   color: color(error);
         // }
-        &:focus ~ .icon,
-        &:valid ~ .icon {
-            color: color(black);
-        }
+
 
         ~ .focus-border {
             position: absolute;
@@ -41,7 +38,7 @@ input:-webkit-autofill {
             left: 0;
             width: 0;
             height: 2px;
-            background-color: color(black); //color(voodoo);
+            // background-color: color(black); //color(voodoo);
             transition: 0.4s;
         }
 
@@ -50,7 +47,6 @@ input:-webkit-autofill {
             left: 0;
             width: 100%;
             top: 9px;
-            color: color(black);
             transition: 0.3s;
             letter-spacing: 0.5px;
         }
@@ -59,7 +55,8 @@ input:-webkit-autofill {
     &-textarea {
         width: 100%;
         min-height: 100px;
-        background-color: #7e5583; //color(voodoo);
+        // background-color: #7e5583; //color(voodoo);
+        // background-color: theme(dark, bgTextarea);
         border-radius: $border-radius-base;
         border: 0;
         outline: 0;
@@ -90,12 +87,11 @@ input:-webkit-autofill {
             position: absolute;
             right: 10px;
             top: 9px;
-            color: color(voodoo);
             transition: 1.4s;
         }
 
         &-label {
-            @include fontSize(14px);
+            @include fontSize(16  px);
             margin-top: 0;
             margin-bottom: calculateRem(7px);
         }

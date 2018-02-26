@@ -98,7 +98,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  &:focus, &.focus, &:hover, &:active, &.active {
+  &:focus, &.focus, &:hover, &:active {
     color: $color;
     border-width: 2px;
     @include BgHexRgba($background, .1);

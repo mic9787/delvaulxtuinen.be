@@ -44,8 +44,6 @@ html, body, .s-container, .s-pusher, .s-content {
   @include breakpoint($screen-sm) {
     @include size($sidebarWidth, 100%);
   }
-	// background: white;
-  background-color: color(trendyPink);
   font-weight: 600;
 	transition: all $animationSpeed;
   transform: translate3d(100%, 0, 0);
