@@ -39,57 +39,53 @@
                     <h2 class="form-title">Offerte</h2>
                     <p>Vraag vrijblijvend een offerte aan. Lorem ipsum dolor sit amet, consectetur adipisic elit. Delectus et doloremque vero eius eos sed illo, nemo maxime nobis porro is tempo.</p>
                   </section>
-                    <!-- <h4 class="form-group-label">Contact gegevens:</h4> -->
                     <section class="form-section">
                       <h4 class="form-group-label">Werkzaamheden:</h4>
                       <div class="form-group">
-                          <input type="radio" name="type" id="aanleg" value="aanleg" required class="radiobtn">
+                          <input type="radio" name="typeOfWork" id="aanleg" value="aanleg" required class="radiobtn">
                           <label for="aanleg">Aanleg</label>
                     </div>
                     <div class="form-group">
-
-                          <input type="radio" name="type" id="onderhoud" value="onderhoud" required class="radiobtn">
+                          <input type="radio" name="typeOfWork" id="onderhoud" value="onderhoud" required class="radiobtn">
                           <label for="onderhoud">Onderhoud</label>
                       </div>
                       <div class="form-group">
-                          <input type="radio" name="type" id="renovatie" value="renovatie" required class="radiobtn">
+                          <input type="radio" name="typeOfWork" id="renovatie" value="renovatie" required class="radiobtn">
                           <label for="renovatie">Renovatie</label>
                       </div>
                     </section>
-                    <!-- <hr class="form-hr" /> -->
                     <section class="form-section">
                       <div class="form-group">
                           <h4 class="form-group-label">Oppervlakte:</h4>
-                          <input type="radio" name="acreage" id="a0" required class="radiobtn">
+                          <input type="radio" name="acreage" id="a0" value="0 - 50m2" required class="radiobtn">
                           <label for="a0">0 - 50m2</label>
                       </div>
                       <div class="form-group">
-                          <input type="radio" name="acreage" id="a1" required class="radiobtn">
+                          <input type="radio" name="acreage" id="a1" value="50-100m2" required class="radiobtn">
                           <label for="a1">50-100m2</label>
                       </div>
                       <div class="form-group">
-                          <input type="radio" name="acreage" id="a2" required class="radiobtn"><label for="a2">100-200m2</label>
+                          <input type="radio" name="acreage" id="a2" value="100-200m2" required class="radiobtn">
+                          <label for="a2">100-200m2</label>
                       </div>
                       <div class="form-group">
-                          <input type="radio" name="acreage" id="a3" required class="radiobtn">
+                          <input type="radio" name="acreage" id="a3" value="0-300m2" required class="radiobtn">
                           <label for="a3">0-300m2</label>
                       </div>
                       <div class="form-group">
 
-                          <input type="radio" name="acreage" id="a4" required class="radiobtn">
+                          <input type="radio" name="acreage" id="a4" value="+300m2" required class="radiobtn">
                           <label for="a4">+300m2</label>
                       </div>
                     </section>
-                    <!-- <hr class="form-hr" /> -->
                     <section class="form-section">
                       <div class="form-group">
                         <label class="form-label" for="message">Beschrijving:</label>
-                          <textarea name="message" id="message" required class="form-textarea"></textarea>
+                          <textarea name="message" id="message" class="form-textarea"></textarea>
                       </div>
                     </section>
-                    <!-- <hr class="form-hr" /> -->
                     <section class="form-section input-txt-group">
-
+                    <!-- <h4 class="form-group-label">Contact gegevens:</h4> -->
                     <div class="form-group">
                         <input type="text" class="form-input" id="name" required autofocus>
                         <label class="form-label" for="name">Naam:</label>
@@ -97,8 +93,8 @@
                         <span class="icon icon-user"></span>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-input" id="adres" required>
-                        <label class="form-label" for="adres">stad:</label>
+                        <input type="text" class="form-input" id="city" required>
+                        <label class="form-label" for="city">stad:</label>
                         <span class="focus-border"></span>
                         <span class="icon icon-location"></span>
                     </div>
@@ -123,17 +119,16 @@
                   </section>
                   <section class="form-section">
 
-
-
                     <div class="form-group">
-                        <button type="button" id="btn-submit" class="btn-secondary btn-block">versturen</button>
+                        <button type="submit" id="btn-submit" class="btn-secondary btn-block">versturen</button>
                     </div>
 
-                    <div class="alert alert-invalid hidden" id="alert">Vul alle velden in aub en check of je email correct is ingevuld.</div>
-                    <div class="alert alert-valid hidden">Je gegevens zijn verzonden</div>
+
                   </section>
 
                 </form>
+                <div class="alert-invalid hidden">Vul alle velden in aub en check of je email correct is ingevuld.</div>
+                <div class="alert-valid hidden">Je gegevens zijn verzonden</div>
             </div> <!-- .sidebar -->
 
 

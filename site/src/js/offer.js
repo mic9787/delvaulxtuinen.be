@@ -1,3 +1,6 @@
+/* requires:
+sidebar.js
+*/
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyB6Ub0uvrNWlpIOBmmdaUeQ9vQ1pL07LGc",
@@ -21,20 +24,26 @@ function submitForm(e){
 
   // Get values
   var name = getInputVal('name');
-  var company = getInputVal('company');
+  var city = getInputVal('city');
+  // var company = getInputVal('company');
   var email = getInputVal('email');
   var phone = getInputVal('phone');
   var message = getInputVal('message');
+  var typeOfWork = getRadioValTypeOfWork();
+  var acreage = getRadioValAcreage();
 
   // Save message
-  saveMessage(name, company, email, phone, message);
+  saveMessage(name, email, phone, city, message, typeOfWork, acreage);
 
   // Show alert
   document.querySelector('.alert-valid').style.display = 'block';
+  for (let el of document.querySelectorAll('.form-section')) el.style.display = 'none';
+
 
   // Hide alert after 3 seconds
   setTimeout(function(){
-    document.querySelector('.alert-valid').style.display = 'none';
+    // document.querySelector('.alert-valid').style.display = 'none';
+    resetMenu();
   },3000);
 
   // Clear form
@@ -45,16 +54,26 @@ function submitForm(e){
 function getInputVal(id){
   return document.getElementById(id).value;
 }
+function getRadioValTypeOfWork(){
+  return document.querySelector('input[name="typeOfWork"]:checked').value
+}
+function getRadioValAcreage(){
+  return document.querySelector('input[name="acreage"]:checked').value
+}
+
 
 // Save message to firebase
-function saveMessage(name, company, email, phone, message){
+function saveMessage(name, email, phone, city, message, typeOfWork, acreage){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
     name: name,
-    company: company,
     email: email,
     phone: phone,
-    message: message
+    city: city,
+    message: message,
+    // company: company,
+    typeOfWork: typeOfWork,
+    acreage: acreage
   });
 }
 // show or hide form

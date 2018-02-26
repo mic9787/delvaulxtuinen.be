@@ -91,7 +91,7 @@ input:-webkit-autofill {
         }
 
         &-label {
-            @include fontSize(16  px);
+            // @include fontSize(16px);
             margin-top: 0;
             margin-bottom: calculateRem(7px);
         }
@@ -125,7 +125,13 @@ input:-webkit-autofill {
 }
 // custom radio
 input[type="radio"].radiobtn {
-    display: none;
+    // display: none;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    // appearance: none;
     & + label {
       margin: 0;
       padding: 0;
@@ -155,15 +161,17 @@ input[type="radio"].radiobtn {
     // border-color: color(error);
 }
 
-.alert {
-    border-radius: $border-radius-base;
-    padding: 10px;
-    color: white;
-    font-weight: 700;
-
-    &-valid {}
-
-    &-invalid {
-        background-color: lighten(color(error), 15%);
-    }
+[class^="alert-"] {
+  font-size: 1.5rem;
+    padding: 0 1.5rem;
+    margin: $gutter 0;
 }
+// .alert {
+//     &-valid {
+//       border-color: color(valid);
+//     }
+//
+//     &-invalid {
+//       border-color: color(error);
+//     }
+// }
