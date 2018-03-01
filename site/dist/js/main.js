@@ -111,9 +111,8 @@ function submitForm(e){
   var email = getInputVal('email');
   var phone = getInputVal('phone');
   var message = getInputVal('message');
+  var acreage = getInputVal('slider1');
   var typeOfWork = getRadioValTypeOfWork();
-  var acreage = getRadioValAcreage();
-
   // Save message
   saveMessage(name, email, phone, city, message, typeOfWork, acreage);
 
@@ -142,7 +141,9 @@ function getRadioValTypeOfWork(){
 function getRadioValAcreage(){
   return document.querySelector('input[name="acreage"]:checked').value
 }
-
+// function getSliderVal(id){
+//   return document.getElementById(id).value;
+// }
 
 // Save message to firebase
 function saveMessage(name, email, phone, city, message, typeOfWork, acreage){

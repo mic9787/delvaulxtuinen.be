@@ -124,6 +124,10 @@ $contrast: 5% !default;
     @include thumb;
     margin-top: 0;
   }
+  &::-ms-tooltip {
+    display: none;
+  }
+
 }
 // Slider
 .slider {
