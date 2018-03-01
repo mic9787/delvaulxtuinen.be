@@ -107,14 +107,15 @@ function submitForm(e){
   // Get values
   var name = getInputVal('name');
   var city = getInputVal('city');
-  // var company = getInputVal('company');
   var email = getInputVal('email');
   var phone = getInputVal('phone');
   var message = getInputVal('message');
   var acreage = getInputVal('slider1');
   var typeOfWork = getRadioValTypeOfWork();
+  var company = getSwitchVal('switch');
+  var companyName = getInputVal('company');
   // Save message
-  saveMessage(name, email, phone, city, message, typeOfWork, acreage);
+  saveMessage(name, email, phone, city, company, companyName, message, typeOfWork, acreage);
 
   // Show alert
   document.querySelector('.alert-valid').style.display = 'block';
@@ -141,12 +142,15 @@ function getRadioValTypeOfWork(){
 function getRadioValAcreage(){
   return document.querySelector('input[name="acreage"]:checked').value
 }
+function getSwitchVal(id){
+  return document.getElementById(id).checked
+}
 // function getSliderVal(id){
 //   return document.getElementById(id).value;
 // }
 
 // Save message to firebase
-function saveMessage(name, email, phone, city, message, typeOfWork, acreage){
+function saveMessage(name, email, phone, city, company, companyName, message, typeOfWork, acreage){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
     name: name,
@@ -154,10 +158,30 @@ function saveMessage(name, email, phone, city, message, typeOfWork, acreage){
     phone: phone,
     city: city,
     message: message,
-    // company: company,
+    company: company,
+    companyName: companyName,
     typeOfWork: typeOfWork,
     acreage: acreage
   });
+}
+
+// if (document.getElementById('switch').checked) {
+//   console.log('checked');
+//   document.querySelector('.form-group.hidden').classList.remove("hidden");
+//
+// }
+
+function switchToggle() {
+    var switcher = document.getElementById("switch");
+    if(switcher.checked){
+      console.log('checked');
+      document.querySelector('.form-group.hidden').classList.remove("hidden");
+
+    } else {
+      switcher.parentElement.nextElementSibling.classList.add("hidden");;
+    }
+
+
 }
 // show or hide form
 // var offerForm = document.getElementById('offer');

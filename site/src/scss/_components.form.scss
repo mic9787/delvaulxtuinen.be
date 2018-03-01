@@ -6,7 +6,6 @@ input:-webkit-autofill {
 }
 .form {
     padding: 1.5rem 0;
-
     &-input {
         padding: 4px 0 8px;
         border: 0;
@@ -153,13 +152,49 @@ input[type="radio"].radiobtn {
     }
 }
 
+// Switch
+.switch {
+    position: absolute;
+  	height: 0;
+  	width: 0;
+  	visibility: hidden;
+    & + label {
+    	cursor: pointer;
+    	text-indent: -9999px;
+      @include size(60px, 30px);
+    	background: color(black);
+    	display: block;
+    	border-radius: 100px;
+    	position: relative;
+      transition: background 0.3s ease-in;
+      &:after {
+      	content: '';
+      	position: absolute;
+      	top: 5px;
+      	left: 5px;
+        @include square(20px);
+      	background: color(voodoo);
+      	border-radius: 90px;
+      	transition: 0.3s;
+      }
+    }
 
+    &:checked + label {
+    	background: color(trendyPinkDark);
+      margin-bottom: 25px;
+    }
 
+    &:checked + label:after {
+    	left: calc(100% - 5px);
+    	transform: translateX(-100%);
+    }
 
-.has-error {
-    color: color(error);
-    // border-color: color(error);
+    & + label:active:after {
+    	width: 40px;
+    }
 }
+
+
 
 [class^="alert-"] {
   font-size: 1.5rem;
@@ -174,4 +209,9 @@ input[type="radio"].radiobtn {
 //     &-invalid {
 //       border-color: color(error);
 //     }
+// }
+
+// .has-error {
+//     color: color(error);
+//     // border-color: color(error);
 // }

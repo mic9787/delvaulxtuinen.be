@@ -11,6 +11,7 @@ $colors:(
   body-bg:    #fff,
   error:      red,
   trendyPink: #8B5D90,
+  trendyPinkDark: #7e5583,
   voodoo:    #644268
 
 );
@@ -95,7 +96,7 @@ $sidebar: (
   dark: (
     // bg: color(voodoo),
     bg: color(trendyPink),
-    bgTextarea: #7e5583, //color(voodoo)
+    bgTextarea: color(trendyPinkDark), //color(voodoo)
     inputBorderColor: color(voodoo),
     focusBorder: color(black),
     labelColor: color(black),
