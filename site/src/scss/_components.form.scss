@@ -10,6 +10,7 @@ input:-webkit-autofill {
         padding: 4px 0 8px;
         border: 0;
         border-bottom: 2px solid;
+        border-color: theme(dark, inputBorderColor);
         background-color: transparent;
         outline: 0;
         width: 100%;
@@ -18,6 +19,10 @@ input:-webkit-autofill {
         &:valid ~ .focus-border {
             width: 100%;
             transition: 0.4s;
+        }
+        &:focus ~ [class^="icon-"], &:focus ~ [class*=" icon-"] ,
+        &:valid ~ [class^="icon-"], &:valid ~ [class*=" icon-"] {
+            color: theme(dark, iconFocusColor);
         }
 
         &:focus ~ label,
@@ -37,7 +42,7 @@ input:-webkit-autofill {
             left: 0;
             width: 0;
             height: 2px;
-            // background-color: color(black); //color(voodoo);
+            background-color: theme(dark, focusBorder);
             transition: 0.4s;
         }
 
@@ -48,23 +53,27 @@ input:-webkit-autofill {
             top: 9px;
             transition: 0.3s;
             letter-spacing: 0.5px;
+            color: theme(dark, labelColor);
         }
     }
 
     &-textarea {
         width: 100%;
         min-height: 100px;
-        // background-color: #7e5583; //color(voodoo);
-        // background-color: theme(dark, bgTextarea);
         border-radius: $border-radius-base;
         border: 0;
         outline: 0;
         margin-top: calculateRem(7px);
         padding: 5px;
+        background-color: theme(dark, bgTextarea);
+        transition: background-color .3s ease-in;
+        &:focus {
+          background-color: theme(dark, bgTextarea)
+        }
     }
 
     &-section {
-      padding: 1.5rem $gutter;
+      padding: 1.5rem $sidebarPadding;
       border-bottom: 2px solid color(black);
       &:first-child {
         padding-top: 0;
@@ -87,6 +96,7 @@ input:-webkit-autofill {
             right: 10px;
             top: 9px;
             transition: 1.4s;
+            color: theme(dark, iconColor);
         }
 
         &-label {

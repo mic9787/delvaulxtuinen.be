@@ -11,7 +11,7 @@ function showValue(val,slidernum,vertical) {
 
 	var pc = val/(slider.max - slider.min); /* the percentage slider value */
 	var thumbsize = 60; /* must match the thumb size in your css */
-	var bigval = 330; /* widest or tallest value depending on orientation */
+	var bigval = 340; /* widest or tallest value depending on orientation */
 	var smallval = 30; /* narrowest or shortest value depending on orientation */
 	var tracksize = bigval - thumbsize;
 	var fillsize = 9;

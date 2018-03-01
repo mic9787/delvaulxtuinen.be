@@ -37,7 +37,7 @@
                 <form name="form" class="form" id="offer">
                   <section class="form-section">
                     <h2 class="form-title">Offerte</h2>
-                    <p>Vraag vrijblijvend een offerte aan. Lorem ipsum dolor sit amet, consectetur adipisic elit. Delectus et doloremque vero eius eos sed illo, nemo maxime nobis porro is tempo.</p>
+                    <p>Vraag vrijblijvend een offerte aan. Lorem ipsum dolor sit amet, consectetur adipisic elit. Delectus et doloremque vero eius eos sed illo, nemo maxime nobis porro.</p>
                   </section>
                     <section class="form-section">
                       <h4 class="form-group-label">Werkzaamheden:</h4>
@@ -60,13 +60,13 @@
                     </section>
                     <section class="form-section">
                       <div class="form-group">
-                        <h4 class="form-group-label">Oppervlakte: <small style="font-size:8px">en wa als ze alleen bomen willen laten kappen?</small></h4>
+                        <h4 class="form-group-label">Oppervlakte:</h4>
                         <div class="slidershell" id="slidershell1">
                           <div class="sliderfill" id="sliderfill1"></div>
                           <div class="slidertrack" id="slidertrack1"></div>
                           <div class="sliderthumb" id="sliderthumb1"></div>
                           <div class="slidervalue" id="slidervalue1">0</div>
-                          <input class="slider" id="slider1" type="range" min="0" max="300" value="0" oninput="showValue(value, 1, false);" onchange="showValue(value, 1, false);"  />
+                          <input class="slider" id="slider1" type="range" min="0" max="300" value="0" oninput="showValue(value, 1, false);" onchange="showValue(value, 1, false);"/>
                         </div>
                       </div>
                     </section>
@@ -128,7 +128,7 @@
                         <span class="icon-location"></span>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-input" id="phone" required>
+                        <input type="tel" class="form-input" id="phone" required>
                         <label class="form-label" for="phone">Tel:</label>
                         <span class="focus-border"></span>
                         <span class="icon-phone"></span>
@@ -151,7 +151,7 @@
                         <button type="submit" id="btn-submit" class="btn-secondary btn-block">versturen</button>
                     </div>
                     <div class="form-group">
-                      <div class="alert-invalid hidden" id="invalid">Vul alle velden in aub. Check of je de oppervlakte hebt ingevuld.</div>
+                      <div class="alert-invalid hidden" id="invalid">Controleer als je de oppervlakte wel hebt ingevuld.</div>
                     </div>
                   </section>
                 </form>
@@ -159,7 +159,10 @@
                 <div class="alert-valid hidden">
                   <h2>Je gegevens zijn verzonden</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, corporis, sed! Dolorem soluta nulla ab animi temporibus! Possimus ad animi quisquam voluptas quod modi, reiciendis illo autem aperiam saepe!</p>
-                  <img src="img/mat.jpg" alt="Matthias Delvaulx" class="img-responsive">
+                  <img src="img/delvaulxtuinen.jpg" alt="Matthias Delvaulx" class="img-responsive">
+                  <p>
+                    <button type="button" class="btn-secondary btn-block" onclick="resetMenu()">Ok</button>
+                  </p>
                 </div>
             </div> <!-- .sidebar -->
         </div> <!-- .s-pusher -->

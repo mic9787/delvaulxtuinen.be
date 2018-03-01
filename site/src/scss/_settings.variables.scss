@@ -12,7 +12,12 @@ $colors:(
   error:      red,
   trendyPink: #8B5D90,
   trendyPinkDark: #7e5583,
-  voodoo:    #644268
+  voodoo:    #644268,
+
+  // green
+  emerald: #2ecc71,
+  nephritis: #27ae60,
+  greenpea: #276541,
 
 );
 @function color($color-name) {
@@ -48,7 +53,8 @@ $screen-md:  960px;
 $screen-lg:  1140px;
 
 // Sidebar
-$sidebarWidth:  420px;
+$sidebarWidth:  440px;
+$sidebarPadding: 2.5rem;
 $animationSpeed:  325ms;
 
 // fonticon
@@ -102,6 +108,29 @@ $sidebar: (
     labelColor: color(black),
     iconColor: color(voodoo),
     iconFocusColor: color(black)
+  ),
+  green: (
+    // bg: color(voodoo),
+    bg: color(emerald),
+    formSectionBorder: color(nephritis),
+    autofillBg: color(emerald),
+    alertBg: color(nephritis),
+    bgTextarea: color(nephritis),
+    bgTextareaFocus: #32c871,
+    inputBorderColor: color(nephritis),
+    focusBorder: color(greenpea),
+    labelColor: color(text),
+    iconColor: color(nephritis),
+    iconFocusColor: color(greenpea),
+    sliderfill: color(greenpea),
+    sliderthumb: color(nephritis),
+    sliderthumbBorder: color(greenpea),
+    slidervalue: color(text),
+    slidertrackBorder: color(greenpea),
+    slidertrackBg: transparent,
+    switchColorDisabled: color(greenpea),
+    switchColorEnabled: color(nephritis),
+    switchColorBullet: color(emerald),
   )
 );
 @function theme($theme, $theme-prop) {

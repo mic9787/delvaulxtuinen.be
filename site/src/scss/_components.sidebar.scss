@@ -40,6 +40,7 @@ html, body, .s-container, .s-pusher, .s-content {
 	right: 0;
 	z-index: 100;
 	visibility: hidden;
+  background-color: theme(dark, bg);
   @include size(100%, 100%);
   @include breakpoint($screen-sm) {
     @include size($sidebarWidth, 100%);
@@ -79,6 +80,11 @@ html, body, .s-container, .s-pusher, .s-content {
       	opacity: 1;
       	transition: opacity $animationSpeed;
       }
+    }
+  }
+  .btn-secondary {
+    &:focus, &.focus, &:hover, &:active {
+      background-color: transparent;
     }
   }
 }

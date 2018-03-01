@@ -42,14 +42,8 @@ function submitForm(e){
   saveMessage(name, email, phone, city, company, companyName, message, typeOfWork, acreage);
 
   // Show alert
-  document.querySelector('.alert-valid').style.display = 'block';
-  document.getElementById('offer').style.display = 'none';
-
-  // Hide alert after 3 seconds
-  setTimeout(function(){
-    // document.querySelector('.alert-valid').style.display = 'none';
-    resetMenu();
-  },3000);
+  document.querySelector('.alert-valid').classList.remove('hidden');
+  document.getElementById('offer').classList.add('hidden');
 
   // Clear form
   document.getElementById('offer').reset();

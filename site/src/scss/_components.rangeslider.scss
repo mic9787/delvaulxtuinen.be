@@ -8,7 +8,7 @@
 $track-color: transparent;
 $thumb-color: transparent;
 
-$thumb-radius: 4px;
+$thumb-radius: 100px;
 $thumb-height: 30px;
 $thumb-width: 60px;
 $thumb-widthMobile: 50px;
@@ -159,7 +159,7 @@ $contrast: 5% !default;
 .sliderthumb {
     // width: 40px;
     // height: 40px;
-    border-radius: $border-radius-base;
+    border-radius: $thumb-radius;
     // @include square($thumb-width);
     @include size($thumb-width, $thumb-height);
     line-height: $thumb-height;
@@ -179,9 +179,6 @@ $contrast: 5% !default;
     pointer-events: none;
 }
 .slidervalue {
-    // width: 40px;
-    // height: 40px;
-    // line-height: 40px;
     @include fontSize(13px);
     // @include square($thumb-width);
     @include size($thumb-width, $thumb-height);
