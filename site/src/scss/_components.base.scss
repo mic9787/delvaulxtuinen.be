@@ -159,7 +159,6 @@ body {
   }
 }
 // Buttons
-
 .btn-primary {
     @include button-variant(#fff, #fff, #fff)
     @include BgHexRgba(#fff, .25);

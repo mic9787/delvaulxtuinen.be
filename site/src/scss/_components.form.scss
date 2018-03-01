@@ -170,7 +170,7 @@ input[type="radio"].radiobtn {
     	text-indent: -9999px;
       @include size(60px, 30px);
     	background: color(black);
-    	display: block;
+    	display: inline-block;
     	border-radius: 100px;
     	position: relative;
       transition: background 0.3s ease-in;
@@ -188,7 +188,7 @@ input[type="radio"].radiobtn {
 
     &:checked + label {
     	background: color(trendyPinkDark);
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
 
     &:checked + label:after {
