@@ -48,5 +48,5 @@ function setValue(val,num,vertical) {
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-  setValue(20,1,false);
+  setValue(0,1,false);
 })

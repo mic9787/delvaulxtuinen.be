@@ -94,6 +94,13 @@ input:-webkit-autofill {
             margin-top: 0;
             margin-bottom: calculateRem(7px);
         }
+
+        [class^="alert-"] {
+            background-color: color(trendyPinkDark);
+            padding: 15px 30px;
+            margin: 20px 0 0 0;
+            border-radius: $border-radius-base;
+        }
     }
 
     &-label {
@@ -203,6 +210,7 @@ input[type="radio"].radiobtn {
       font-size: 1.5rem;
     }
 }
+
 // .alert {
 //     &-valid {
 //       border-color: color(valid);

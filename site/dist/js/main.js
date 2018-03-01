@@ -103,7 +103,13 @@ document.getElementById('offer').addEventListener('submit', submitForm);
 // Submit form
 function submitForm(e){
   e.preventDefault();
+  if(document.getElementById('slider1').value === '0') {
+    document.getElementById('invalid').classList.remove('hidden');
+    return false;
+  } else {
+    document.getElementById('invalid').classList.add('hidden');
 
+  }
   // Get values
   var name = getInputVal('name');
   var city = getInputVal('city');
@@ -120,7 +126,6 @@ function submitForm(e){
   // Show alert
   document.querySelector('.alert-valid').style.display = 'block';
   document.getElementById('offer').style.display = 'none';
-
 
   // Hide alert after 3 seconds
   setTimeout(function(){
@@ -165,9 +170,7 @@ function saveMessage(name, email, phone, city, company, companyName, message, ty
 function switchToggle() {
     var switcher = document.getElementById("switch");
     if(switcher.checked){
-      console.log('checked');
       document.querySelector('.form-group.hidden').classList.remove("hidden");
-
     } else {
       switcher.parentElement.nextElementSibling.classList.add("hidden");;
     }
@@ -223,5 +226,5 @@ function setValue(val,num,vertical) {
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-  setValue(20,1,false);
+  setValue(0,1,false);
 })
