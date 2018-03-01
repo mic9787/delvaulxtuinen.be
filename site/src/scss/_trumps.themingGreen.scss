@@ -47,7 +47,7 @@ input:-webkit-autofill {
       }
     }
 }
-
+// Slider
 .sliderfill {
   background: theme(green, sliderfill);
 }
@@ -61,7 +61,7 @@ input:-webkit-autofill {
 .slidertrack {
   border-color: theme(green, slidertrackBorder);
 }
-
+// Switch
 .switch {
   & + label {
     background: theme(green, switchColorDisabled);
