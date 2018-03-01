@@ -37,7 +37,7 @@ function submitForm(e){
 
   // Show alert
   document.querySelector('.alert-valid').style.display = 'block';
-  for (let el of document.querySelectorAll('.form-section')) el.style.display = 'none';
+  document.getElementById('offer').style.display = 'none';
 
 
   // Hide alert after 3 seconds
@@ -63,9 +63,6 @@ function getRadioValAcreage(){
 function getSwitchVal(id){
   return document.getElementById(id).checked
 }
-// function getSliderVal(id){
-//   return document.getElementById(id).value;
-// }
 
 // Save message to firebase
 function saveMessage(name, email, phone, city, company, companyName, message, typeOfWork, acreage){
@@ -83,12 +80,6 @@ function saveMessage(name, email, phone, city, company, companyName, message, ty
   });
 }
 
-// if (document.getElementById('switch').checked) {
-//   console.log('checked');
-//   document.querySelector('.form-group.hidden').classList.remove("hidden");
-//
-// }
-
 function switchToggle() {
     var switcher = document.getElementById("switch");
     if(switcher.checked){
@@ -98,14 +89,4 @@ function switchToggle() {
     } else {
       switcher.parentElement.nextElementSibling.classList.add("hidden");;
     }
-
-
 }
-// show or hide form
-// var offerForm = document.getElementById('offer');
-// function showOffer() {
-//   offerForm.classList.toggle("hidden");
-// }
-// document.getElementById("js-showOffer").onclick = function() {
-//   showOffer()
-// };
