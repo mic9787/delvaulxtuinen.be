@@ -53,8 +53,24 @@
                           <input type="radio" name="typeOfWork" id="renovatie" value="renovatie" required class="radiobtn">
                           <label for="renovatie">Renovatie</label>
                       </div>
+                      <div class="form-group">
+                        <input type="radio" name="typeOfWork" id="andere" value="andere" required class="radiobtn">
+                        <label for="andere">Andere <small style="font-size:8px">input text</small></label>
+                      </div>
                     </section>
                     <section class="form-section">
+                      <div class="form-group">
+                        <h4 class="form-group-label">Oppervlakte <small style="font-size:8px">en wa als ze alleen bomen willen laten kappen?</small>:</h4>
+                        <div class="slidershell" id="slidershell1">
+                          <div class="sliderfill" id="sliderfill1"></div>
+                          <div class="slidertrack" id="slidertrack1"></div>
+                          <div class="sliderthumb" id="sliderthumb1"></div>
+                          <div class="slidervalue" id="slidervalue1">0</div>
+                          <input class="slider" id="slider1" type="range" min="0" max="300" value="0" oninput="showValue(value, 1, false);" onchange="showValue(value, 1, false);" />
+                        </div>
+                      </div>
+                    </section>
+                    <section class="form-section hidden">
                       <div class="form-group">
                           <h4 class="form-group-label">Oppervlakte:</h4>
                           <input type="radio" name="acreage" id="a0" value="0 - 50m2" required class="radiobtn">

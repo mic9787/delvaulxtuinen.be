@@ -81,7 +81,7 @@ body {
 .ctas {
   @include breakpoint($screen-sm) {
     display: inline-block;
-    min-width: 400px;
+    min-width: 310px;
     margin-left: 20px;
   }
   a:link, a:visited {
