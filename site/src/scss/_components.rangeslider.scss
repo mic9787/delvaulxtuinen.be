@@ -9,8 +9,8 @@ $track-color: transparent;
 $thumb-color: transparent;
 
 $thumb-radius: 100px;
-$thumb-height: 30px;
-$thumb-width: 60px;
+$thumb-height: 35px;
+$thumb-width: 70px;
 $thumb-widthMobile: 50px;
 
 $thumb-shadow-size: 0;
@@ -164,10 +164,10 @@ $contrast: 5% !default;
     @include size($thumb-width, $thumb-height);
     line-height: $thumb-height;
 
-    @include breakpoint(max-width $screen-sm) {
-      @include square($thumb-widthMobile);
-      line-height: $thumb-widthMobile;
-    }
+    // @include breakpoint(max-width $screen-sm) {
+    //   @include square($thumb-widthMobile);
+    //   line-height: $thumb-widthMobile;
+    // }
     background-color: color(black);
     position: absolute;
     left: 0;
@@ -177,16 +177,17 @@ $contrast: 5% !default;
     margin: 0;
     text-align: center;
     pointer-events: none;
+    z-index: 9;
 }
 .slidervalue {
     @include fontSize(13px);
     // @include square($thumb-width);
     @include size($thumb-width, $thumb-height);
     line-height: $thumb-height;
-    @include breakpoint(max-width $screen-sm) {
-      @include square($thumb-widthMobile);
-      line-height: $thumb-widthMobile;
-    }
+    // @include breakpoint(max-width $screen-sm) {
+    //   @include square($thumb-widthMobile);
+    //   line-height: $thumb-widthMobile;
+    // }
     color: #fff;
     position: absolute;
     left: 0;
@@ -196,7 +197,17 @@ $contrast: 5% !default;
     margin: 0;
     text-align: center;
     pointer-events: none;
+//     -moz-user-select: none;
+// -khtml-user-select: none;
+//     user-select: none;
+
+    z-index: 10;
     // &::first-letter {
     //   font-weight: 400;
     // }
+}
+
+.maxval {
+  animation-duration: 0.5s;
+  animation-name: bounceIn;
 }

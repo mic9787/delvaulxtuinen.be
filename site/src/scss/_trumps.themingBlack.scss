@@ -1,0 +1,83 @@
+// sidebar
+.sidebar {
+  background-color: theme(black, bg);
+  color: color(whitisch);
+  .btn-secondary {
+      border-color: color(whitisch);
+      color: color(whitisch);
+    &:focus, &.focus, &:hover, &:active {
+      background-color: transparent;
+    }
+  }
+}
+// form elements
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px theme(black, autofillBg) inset;
+    color: white;
+    -webkit-text-fill-color: color(whitisch);;
+}
+.form {
+  &-section {
+    border-color: theme(black, formSectionBorder);
+  }
+  &-input {
+    border-color: theme(black, inputBorderColor);
+    color: color(whitisch);
+    &:focus ~ [class^="icon-"], &:focus ~ [class*=" icon-"] ,
+    &:valid ~ [class^="icon-"], &:valid ~ [class*=" icon-"] {
+        color: theme(black, iconFocusColor);
+    }
+    ~ label {
+      color: theme(black, labelColor);
+
+    }
+    ~ .focus-border {
+      background-color: theme(black, focusBorder);
+    }
+  }
+  &-textarea {
+    background-color: theme(black, bgTextarea);
+    color: color(whitisch);
+    // font-weight: 600;
+    &:focus{
+      background-color: theme(black, bgTextareaFocus);
+    }
+  }
+  &-group {
+      [class^="icon-"], [class*=" icon-"] {
+          color: theme(black, iconColor);
+      }
+      [class^="alert-"] {
+        background-color: theme(black, alertBg);
+      }
+    }
+}
+// Slider
+.sliderfill {
+  background: theme(black, sliderfill);
+}
+.sliderthumb {
+  background-color: theme(black, sliderthumb);
+  border: 2px solid theme(black, sliderthumbBorder);
+}
+.slidervalue {
+  color: theme(black, slidervalue);
+}
+.slidertrack {
+  border-color: theme(black, slidertrackBorder);
+}
+// Switch
+.switch {
+  & + label {
+    background: theme(black, switchColorDisabled);
+    &::after {
+      background: theme(black, switchColorBullet);
+    }
+  }
+  &:checked + label {
+    background: theme(black, switchColorEnabled);
+  }
+}

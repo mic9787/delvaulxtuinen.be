@@ -36,8 +36,9 @@ function submitForm(e){
   var message = getInputVal('message');
   var acreage = getInputVal('slider1');
   var typeOfWork = getRadioValTypeOfWork();
-  var company = getSwitchVal('switch');
-  var companyName = getInputVal('company');
+  var phone = getInputVal('phone');
+  var company = getRadioValCompany();
+  var companyName = getInputVal('companyName');
   // Save message
   saveMessage(name, email, phone, city, company, companyName, message, typeOfWork, acreage);
 
@@ -59,6 +60,9 @@ function getRadioValTypeOfWork(){
 function getRadioValAcreage(){
   return document.querySelector('input[name="acreage"]:checked').value
 }
+function getRadioValCompany(){
+  return document.querySelector('input[name="company"]:checked').value
+}
 function getSwitchVal(id){
   return document.getElementById(id).checked
 }
@@ -72,18 +76,26 @@ function saveMessage(name, email, phone, city, company, companyName, message, ty
     phone: phone,
     city: city,
     message: message,
-    company: company,
+    companyOrPrivate: company,
     companyName: companyName,
     typeOfWork: typeOfWork,
     acreage: acreage
   });
 }
 
-function switchToggle() {
-    var switcher = document.getElementById("switch");
-    if(switcher.checked){
-      document.querySelector('.form-group.hidden').classList.remove("hidden");
+// function switchToggle() {
+//     var switcher = document.getElementById("switch");
+//     if(switcher.checked){
+//       document.querySelector('.form-group.hidden').classList.remove("hidden");
+//     } else {
+//       switcher.parentElement.nextElementSibling.classList.add("hidden");;
+//     }
+// }
+function toggleCompanyInput() {
+    var company = document.getElementById("Bedrijf");
+    if(company.checked){
+      document.querySelector('#company-name').classList.remove("hidden");
     } else {
-      switcher.parentElement.nextElementSibling.classList.add("hidden");;
+      document.querySelector('#company-name').classList.add("hidden");
     }
 }

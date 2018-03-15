@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import "settings.variables";
 @import "settings.font";
+@import "settings.animations";
+
 
 @import "tools.breakpoint";
 @import "tools.mixins";
@@ -15,5 +17,8 @@
 
 // @import "trumps.themingLight";
 // @import "trumps.themingDark";
-@import "trumps.themingGreen";
+// @import "trumps.themingGreen";
+// @import "trumps.themingGocrazy";
+@import "trumps.themingBlack";
+
 @import "trumps.utilities";

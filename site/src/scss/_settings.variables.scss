@@ -14,10 +14,21 @@ $colors:(
   trendyPinkDark: #7e5583,
   voodoo:    #644268,
 
-  // green
+  // green fell
   emerald: #2ecc71,
   nephritis: #27ae60,
   greenpea: #276541,
+
+  // Green dull
+  palmLeaf: #84A441,
+  dollarBill: #748f3c,
+  androidGreen: #9FC54E,
+
+  // black
+  bastille: #1E181F,
+  accent: #332a35,
+  // accent: #644268,
+  whitisch: #dbd9d9,
 
 );
 @function color($color-name) {
@@ -131,6 +142,58 @@ $sidebar: (
     switchColorDisabled: color(greenpea),
     switchColorEnabled: color(nephritis),
     switchColorBullet: color(emerald),
+  ),
+  crazy: (
+    // bg: color(voodoo),
+    bg: color(palmLeaf),
+    formSectionBorder: color(dollarBill),
+    autofillBg: color(palmLeaf),
+    alertBg: color(dollarBill),
+    bgTextarea: color(dollarBill),
+    bgTextareaFocus: lighten(color(dollarBill), 4%),
+    inputBorderColor: color(dollarBill),
+    focusBorder: darken(color(dollarBill), 10%),
+    labelColor: color(text),
+    iconColor: color(dollarBill),
+    iconFocusColor: darken(color(dollarBill), 10%),
+    sliderfill: darken(color(dollarBill), 10%),
+    sliderthumb: color(dollarBill),
+    sliderthumbBorder: darken(color(dollarBill), 10%),
+    slidervalue: color(text),
+    slidertrackBorder: darken(color(dollarBill), 10%),
+    slidertrackBg: transparent,
+    switchColorDisabled: darken(color(dollarBill), 10%),
+    switchColorEnabled: color(dollarBill),
+    switchColorBullet: color(palmLeaf),
+  ),
+  black: (
+    // bg: color(voodoo),
+    bg: color(bastille),
+    // formSectionBorder: lighten(color(bastille), 5%),
+    formSectionBorder: color(accent),
+    autofillBg: color(bastille),
+
+    alertBg: color(accent),
+
+    bgTextarea: color(accent),
+    bgTextareaFocus: color(bastille),//lighten(color(accent), 4%),
+
+    inputBorderColor: color(accent),
+    focusBorder: color(whitisch),
+    labelColor: color(whitisch),
+    iconColor: color(accent),
+    iconFocusColor: color(whitisch),
+
+    sliderfill: color(whitisch),
+    sliderthumb: color(accent),
+    sliderthumbBorder: color(whitisch),
+    slidervalue: color(whitisch),
+    slidertrackBorder: color(whitisch),
+    slidertrackBg: transparent,
+
+    switchColorDisabled: darken(color(accent), 10%),
+    switchColorEnabled: color(accent),
+    switchColorBullet: color(whitisch)
   )
 );
 @function theme($theme, $theme-prop) {

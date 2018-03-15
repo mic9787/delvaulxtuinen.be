@@ -20,7 +20,7 @@
               <div class="s-content-inner">
                   <div class="container">
                       <h1 class="brand"><a href="./"><span>Delvaulx</span>&nbsp;Tuinen</a></h1>
-                      <h2 class="lead">Delvaulx Tuinen is een onderneming die gespecialiseerd is in het aanleggen en onderhouden van tuinen, zowel voor particulieren als voor bedrijven.</h2>
+                      <h2 class="lead">Some people look for a beautiful garden, <br />others make a garden beautiful</h2>
                       <button type="button" class="btn-primary" id="s-btn">Offerte aanvragen</button>
                       <div class="ctas">
                         <a href="tel:+32472881850" class="callme">0472 88 18 50</a>
@@ -37,10 +37,10 @@
                 <form name="form" class="form" id="offer">
                   <section class="form-section">
                     <h2 class="form-title">Offerte</h2>
-                    <p>Vraag vrijblijvend een offerte aan. Lorem ipsum dolor sit amet, consectetur adipisic elit. Delectus et doloremque vero eius eos sed illo, nemo maxime nobis porro.</p>
+                    <p>Vraag vrijblijvend een offerte aan door onderstaand formulier in te vullen. Na het ontvangen van uw gegevens neemt Delvaulx Tuinen binnen 2 weken contact met u op.</p>
                   </section>
                     <section class="form-section">
-                      <h4 class="form-group-label">Werkzaamheden:</h4>
+                      <h4 class="form-group-label">Uit te voeren werkzaamheden:</h4>
                       <div class="form-group">
                           <input type="radio" name="typeOfWork" id="aanleg" value="aanleg" required class="radiobtn">
                           <label for="aanleg">Aanleg</label>
@@ -53,10 +53,10 @@
                           <input type="radio" name="typeOfWork" id="renovatie" value="renovatie" required class="radiobtn">
                           <label for="renovatie">Renovatie</label>
                       </div>
-                      <!-- <div class="form-group">
+                      <div class="form-group">
                         <input type="radio" name="typeOfWork" id="andere" value="andere" required class="radiobtn">
-                        <label for="andere">Andere <small style="font-size:8px">input text</small></label>
-                      </div> -->
+                        <label for="andere">Andere</label>
+                      </div>
                     </section>
                     <section class="form-section">
                       <div class="form-group">
@@ -66,19 +66,27 @@
                           <div class="slidertrack" id="slidertrack1"></div>
                           <div class="sliderthumb" id="sliderthumb1"></div>
                           <div class="slidervalue" id="slidervalue1">0</div>
-                          <input class="slider" id="slider1" type="range" min="0" max="300" value="0" oninput="showValue(value, 1, false);" onchange="showValue(value, 1, false);"/>
+                          <input class="slider" id="slider1" type="range" min="0" max="500" value="0" oninput="showValue(value, 1, false);" onchange="showValue(value, 1, false);"/>
                         </div>
                       </div>
                     </section>
                     <section class="form-section">
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <span class="form-group-label">Bedrijf:</span>
                         <input type="checkbox" id="switch" name="switch" class="switch" onclick="switchToggle();" />
                         <label for="switch">Toggle</label>
-                      </div>
-                      <div class="form-group hidden">
-                          <input type="text" class="form-input" id="company"  autofocus>
-                          <label class="form-label" for="company">Bedrijfsnaam:</label>
+                      </div> -->
+                        <div class="form-group">
+                            <input type="radio" name="company" id="Particulier"  onchange="toggleCompanyInput()" value="Particulier" required class="radiobtn">
+                            <label for="Particulier">Particulier</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" name="company" id="Bedrijf" onchange="toggleCompanyInput()" value="Bedrijf" required class="radiobtn">
+                            <label for="Bedrijf">Bedrijf</label>
+                        </div>
+                      <div class="form-group hidden" id="company-name">
+                          <input type="text" class="form-input" id="companyName" name="companyName"  autofocus>
+                          <label class="form-label" for="companyName">Bedrijfsnaam:</label>
                           <span class="focus-border"></span>
                           <span class="icon-office"></span>
                       </div>
@@ -109,8 +117,8 @@
                     </section> -->
                     <section class="form-section">
                       <div class="form-group">
-                        <label class="form-label" for="message">Beschrijving:</label>
-                          <textarea name="message" id="message" class="form-textarea"></textarea>
+                        <label class="form-label" for="message">Beschrijving uit te voeren werkzaamheden:</label>
+                          <textarea name="message" id="message" class="form-textarea" required></textarea>
                       </div>
                     </section>
                     <section class="form-section input-txt-group">
@@ -123,7 +131,7 @@
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-input" id="city" required>
-                        <label class="form-label" for="city">stad:</label>
+                        <label class="form-label" for="city">Woonplaats:</label>
                         <span class="focus-border"></span>
                         <span class="icon-location"></span>
                     </div>
@@ -157,8 +165,8 @@
                 </form>
                 <!-- <div class="alert-invalid hidden">Vul alle velden in aub en check of je email correct is ingevuld.</div> -->
                 <div class="alert-valid hidden">
-                  <h2>Je gegevens zijn verzonden</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, corporis, sed! Dolorem soluta nulla ab animi temporibus! Possimus ad animi quisquam voluptas quod modi, reiciendis illo autem aperiam saepe!</p>
+                  <h2 class="form-title">Verzonden!</h2>
+                  <p>Bedankt voor uw interesse in Delvaulx Tuinen. We kijken alvast uit naar een florissante samenwerking!</p>
                   <img src="img/delvaulxtuinen.jpg" alt="Matthias Delvaulx" class="img-responsive">
                   <p>
                     <button type="button" class="btn-secondary btn-block" onclick="resetMenu()">Ok</button>

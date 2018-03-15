@@ -116,3 +116,10 @@
     }
   }
 }
+
+// Animations
+@mixin animate($name, $duration) {
+    animation-name: $name;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}

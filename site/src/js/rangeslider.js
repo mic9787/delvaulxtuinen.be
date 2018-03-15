@@ -18,13 +18,24 @@ function showValue(val,slidernum,vertical) {
 	var filloffset = 10;
 	var bordersize = 2;
 	var loc = vertical ? (1 - pc) * tracksize : pc * tracksize;
+
 	if (window.matchMedia('(max-width: 600px)').matches)
 	{
-			var thumbsize = 50;
+		var thumbsize = 50;
 	    var bigval = 250;
-			var tracksize = bigval - thumbsize;
+		var tracksize = bigval - thumbsize;
 	}
-	rangevalue.innerHTML = '&#177;' + val + 'm&#178';
+
+    rangevalue.innerHTML = '&#177;' + val + 'm&#178';
+    if (slider.value == 500) {
+         rangevalue.innerHTML = '+' + val + 'm&#178';
+         thumb.classList.add('maxval');
+    } else {
+        rangevalue.innerHTML = '&#177;' + val + 'm&#178';
+        thumb.classList.remove('maxval');
+
+    }
+
 
 	rangevalue.style.top = (vertical ? loc : 0) + "px";
 	rangevalue.style.left = (vertical ? 0 : loc) + "px";
@@ -44,7 +55,13 @@ function showValue(val,slidernum,vertical) {
 /* we often need a function to set the slider values on page load */
 function setValue(val,num,vertical) {
 	document.getElementById("slider"+num).value = val;
-	showValue(val,num,vertical);
+    showValue(val,num,vertical);
+    // if (val === 500) {
+    //      document.getElementById("sliderthumb1").classList.add('maxval');
+    //      document.getElementById("slidervalue1").innerHTML = '+' + this.value + 'm&#178';
+    // } else {
+    //     document.getElementById("sliderthumb1").classList.remove('maxval')
+    // }
 }
 
 document.addEventListener('DOMContentLoaded', function(){

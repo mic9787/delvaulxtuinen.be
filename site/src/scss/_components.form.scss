@@ -7,14 +7,14 @@ input:-webkit-autofill {
 .form {
     padding: 1.5rem 0;
     &-input {
-        padding: 4px 0 8px;
+        padding: 8px 0 7px;// 4px 0 8px;
         border: 0;
         border-bottom: 2px solid;
         border-color: theme(dark, inputBorderColor);
         background-color: transparent;
         outline: 0;
         width: 100%;
-        font-weight: 600;
+        // font-weight: 600;
         &:focus ~ .focus-border,
         &:valid ~ .focus-border {
             width: 100%;
@@ -97,6 +97,7 @@ input:-webkit-autofill {
             top: 9px;
             transition: 1.4s;
             color: theme(dark, iconColor);
+            font-size: 1.3rem;
         }
 
         &-label {
@@ -105,12 +106,13 @@ input:-webkit-autofill {
             margin-bottom: calculateRem(7px);
         }
 
-        [class^="alert-"] {
-            background-color: color(trendyPinkDark);
-            padding: 15px 30px;
-            margin: 20px 0 0 0;
-            border-radius: $border-radius-base;
-        }
+        // [class^="alert-"] {
+        //     background-color: color(trendyPinkDark);
+        //     padding: 15px 30px;
+        //     margin: 20px 0 0 0;
+        //     border-radius: $border-radius-base;
+        //
+        // }
     }
 
     &-label {
@@ -219,7 +221,11 @@ input[type="radio"].radiobtn {
     h4 {
       font-size: 1.5rem;
     }
+    img {
+        margin-top: 20px;
+    }
 }
+
 
 // .alert {
 //     &-valid {
