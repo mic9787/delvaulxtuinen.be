@@ -2,7 +2,9 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px color(trendyPink) inset;
+    -webkit-box-shadow: 0 0 0px 1000px theme(black, autofillBg) inset;
+    color: white;
+    -webkit-text-fill-color: color(whitisch);
 }
 .form {
     padding: 1.5rem 0;
@@ -10,7 +12,8 @@ input:-webkit-autofill {
         padding: 8px 0 7px;// 4px 0 8px;
         border: 0;
         border-bottom: 2px solid;
-        border-color: theme(dark, inputBorderColor);
+        border-color: theme(black, inputBorderColor);
+        color: color(whitisch);
         background-color: transparent;
         outline: 0;
         width: 100%;
@@ -22,7 +25,7 @@ input:-webkit-autofill {
         }
         &:focus ~ [class^="icon-"], &:focus ~ [class*=" icon-"] ,
         &:valid ~ [class^="icon-"], &:valid ~ [class*=" icon-"] {
-            color: theme(dark, iconFocusColor);
+            color: theme(black, iconFocusColor);
         }
 
         &:focus ~ label,
@@ -42,7 +45,7 @@ input:-webkit-autofill {
             left: 0;
             width: 0;
             height: 2px;
-            background-color: theme(dark, focusBorder);
+            background-color: theme(black, focusBorder);
             transition: 0.4s;
         }
 
@@ -53,7 +56,7 @@ input:-webkit-autofill {
             top: 9px;
             transition: 0.3s;
             letter-spacing: 0.5px;
-            color: theme(dark, labelColor);
+            color: theme(black, labelColor);
         }
     }
 
@@ -65,16 +68,17 @@ input:-webkit-autofill {
         outline: 0;
         margin-top: calculateRem(7px);
         padding: 5px;
-        background-color: theme(dark, bgTextarea);
+        background-color: theme(black, bgTextarea);
+        color: color(whitisch);
         transition: background-color .3s ease-in;
         &:focus {
-          background-color: theme(dark, bgTextarea)
+          background-color: theme(black, bgTextareaFocus)
         }
     }
 
     &-section {
       padding: 1.5rem $sidebarPadding;
-      border-bottom: 2px solid color(black);
+      border-bottom: 2px solid theme(black, formSectionBorder);
       &:first-child {
         padding-top: 0;
       }
@@ -96,7 +100,7 @@ input:-webkit-autofill {
             right: 10px;
             top: 9px;
             transition: 1.4s;
-            color: theme(dark, iconColor);
+            color: theme(black, iconColor);
             font-size: 1.3rem;
         }
 
@@ -104,6 +108,10 @@ input:-webkit-autofill {
             // @include fontSize(16px);
             margin-top: 0;
             margin-bottom: calculateRem(7px);
+        }
+
+        [class^="alert-"] {
+          background-color: theme(black, alertBg);
         }
 
         // [class^="alert-"] {
@@ -181,7 +189,7 @@ input[type="radio"].radiobtn {
     	cursor: pointer;
     	text-indent: -9999px;
       @include size(60px, 30px);
-    	background: color(black);
+    	background: theme(black, switchColorDisabled);
     	display: inline-block;
     	border-radius: 100px;
     	position: relative;
@@ -192,14 +200,14 @@ input[type="radio"].radiobtn {
       	top: 5px;
       	left: 5px;
         @include square(20px);
-      	background: color(voodoo);
+      	background: theme(black, switchColorBullet);
       	border-radius: 90px;
       	transition: 0.3s;
       }
     }
 
     &:checked + label {
-    	background: color(trendyPinkDark);
+    	background: theme(black, switchColorEnabled);
       margin-bottom: 15px;
     }
 

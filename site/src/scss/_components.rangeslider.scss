@@ -146,7 +146,7 @@ $contrast: 5% !default;
 }
 .slidertrack {
     position: absolute;
-    border: 2px solid;
+    border: 2px solid theme(black, slidertrackBorder);
     border-radius: 4px;
 }
 .sliderfill {
@@ -154,7 +154,7 @@ $contrast: 5% !default;
     border-radius: $border-radius-base;
     position: absolute;
     pointer-events: none;
-    background: color(black);
+    background: theme(black, sliderfill);
 }
 .sliderthumb {
     // width: 40px;
@@ -168,7 +168,6 @@ $contrast: 5% !default;
     //   @include square($thumb-widthMobile);
     //   line-height: $thumb-widthMobile;
     // }
-    background-color: color(black);
     position: absolute;
     left: 0;
     top: 0;
@@ -178,6 +177,8 @@ $contrast: 5% !default;
     text-align: center;
     pointer-events: none;
     z-index: 9;
+    background-color: theme(black, sliderthumb);
+    border: 2px solid theme(black, sliderthumbBorder);
 }
 .slidervalue {
     @include fontSize(13px);
@@ -188,7 +189,6 @@ $contrast: 5% !default;
     //   @include square($thumb-widthMobile);
     //   line-height: $thumb-widthMobile;
     // }
-    color: #fff;
     position: absolute;
     left: 0;
     top: 0;
@@ -197,6 +197,7 @@ $contrast: 5% !default;
     margin: 0;
     text-align: center;
     pointer-events: none;
+    color: theme(black, slidervalue);
 //     -moz-user-select: none;
 // -khtml-user-select: none;
 //     user-select: none;

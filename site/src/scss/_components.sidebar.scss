@@ -35,21 +35,22 @@ html, body, .s-container, .s-pusher, .s-content {
 }
 
 .sidebar {
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 100;
-	visibility: hidden;
-  background-color: theme(dark, bg);
-  @include size(100%, 100%);
-  @include breakpoint($screen-sm) {
-    @include size($sidebarWidth, 100%);
-  }
-  font-weight: 600;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    visibility: hidden;
+    font-weight: 600;
 	transition: all $animationSpeed;
-  transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   overflow-y: auto;
   // border-left: 2px solid color(black);
+  background-color: theme(black, bg);
+  color: color(whitisch);
+  @include size(100%, 100%);
+  @include breakpoint($screen-sm) {
+      @include size($sidebarWidth, 100%);
+  }
   &:after {
   	position: absolute;
   	top: 0;
@@ -83,6 +84,8 @@ html, body, .s-container, .s-pusher, .s-content {
     }
   }
   .btn-secondary {
+      border-color: color(whitisch);
+      color: color(whitisch);
     &:focus, &.focus, &:hover, &:active {
       background-color: transparent;
     }
