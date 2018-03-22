@@ -16,8 +16,8 @@ var gulp = require('gulp'),
     // local server
     browserSync = require('browser-sync').create();
 
-var src = './src/',
-    dist = './dist/',
+var src = 'src/',
+    dist = 'dist/',
     inputCss = src + 'scss/**/*.scss',
     outputCss = dist + 'css',
     inputHtml = src + '*.html',
@@ -92,7 +92,7 @@ gulp.task('js', function() {
 });
 // move folders
 gulp.task('move', function(){
-  gulp.src(filesToMove, { base: './src/' })
+  gulp.src(filesToMove, { base: 'src/' })
   .pipe(gulp.dest('dist'));
 });
 // start local server

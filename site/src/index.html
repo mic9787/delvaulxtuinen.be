@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="" id="home">
+<html class="no-js" lang="">
 
 <head>
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/delvaulxtuinen.css">
 </head>
 
-<body>
+<body id="home">
     <div id="s-container" class="s-container">
 
         <div class="s-pusher">
@@ -24,15 +24,16 @@
                       <button type="button" class="btn-primary" id="s-btn">Offerte aanvragen</button>
                       <div class="ctas">
                         <a href="tel:+32472881850" class="callme">0472 88 18 50</a>
-                        <a href="mailto:matthiasdelvaulx@delvaulxtuinen.com" class="mailme">matthias@delvaulxtuinen.com</a>
+                        <a href="mailto:matthiasdelvaulx@delvaulxtuinen.com" title="matthiasdelvaulx@delvaulxtuinen.com" class="mailme">matthias@delvaulxtuinen.com</a>
                       </div>
+                      <p><a href="diensten.html">diensten</a></p>
                   </div> <!-- .container -->
               </div> <!-- .s-content-inner -->
               <footer class="footer">
                 <a href="tel:0472881850" class="callme">0472 88 18 50</a>
               </footer>
           </div> <!-- .s-content -->
-            <div class="sidebar">
+            <aside class="sidebar" id="js-sidebar">
                 <button type="button" name="button" id="jsclose" class="icon-cross close"></button>
                 <form name="form" class="form" id="offer">
                   <section class="form-section">
@@ -147,12 +148,6 @@
                         <span class="focus-border"></span>
                         <span class="icon-envelop"></span>
                     </div>
-                    <!-- <div class="form-group">
-                        <input type="text" class="form-input" id="company">
-                        <label class="form-label" for="company">Bedrijf:</label>
-                        <span class="focus-border"></span>
-                        <span class="icon-office"></span>
-                    </div> -->
                   </section>
                   <section class="form-section">
                     <div class="form-group">
@@ -163,7 +158,6 @@
                     </div>
                   </section>
                 </form>
-                <!-- <div class="alert-invalid hidden">Vul alle velden in aub en check of je email correct is ingevuld.</div> -->
                 <div class="alert-valid hidden">
                   <h2 class="form-title">Verzonden!</h2>
                   <p>Bedankt voor uw interesse in Delvaulx Tuinen. We kijken alvast uit naar een florissante samenwerking!</p>
@@ -172,7 +166,7 @@
                     <button type="button" class="btn-secondary btn-block" onclick="resetMenu()">Ok</button>
                   </p>
                 </div>
-            </div> <!-- .sidebar -->
+            </aside> <!-- .sidebar -->
         </div> <!-- .s-pusher -->
     </div><!-- .s-container -->
     <script type="text/javascript">

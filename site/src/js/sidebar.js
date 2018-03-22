@@ -10,7 +10,8 @@ modernizr.custom.js
 
 //  Copyright 2013, Codrops
 //  http://www.codrops.com
-
+var sidebar = document.getElementById("js-sidebar");
+if (sidebar != null) {
  var SidebarMenuEffects = (function() {
    var hasParentClass = function(element, classname) {
      if (element.className && element.className.split(' ').indexOf(classname) >= 0) return true;
@@ -74,3 +75,4 @@ modernizr.custom.js
 	init();
 
 })();
+}

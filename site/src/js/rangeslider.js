@@ -64,6 +64,9 @@ function setValue(val,num,vertical) {
     // }
 }
 
-document.addEventListener('DOMContentLoaded', function(){
-  setValue(0,1,false);
-})
+var rangeslider = document.getElementById('slider1');
+if (rangeslider != null) {
+    document.addEventListener('DOMContentLoaded', function(){
+      setValue(0,1,false);
+    })
+}

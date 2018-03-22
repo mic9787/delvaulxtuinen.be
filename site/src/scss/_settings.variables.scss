@@ -8,12 +8,12 @@ $colors:(
   green:      #9fc54e,
   brown:      #6d5c5c,
   whitish:    #f0f1ed,
-  body-bg:    #fff,
+  body-bg:    #ffffff,
+  text-bg:    #f3fff4,
   error:      red,
   trendyPink: #8B5D90,
   trendyPinkDark: #7e5583,
   voodoo:    #644268,
-
   // green fell
   emerald: #2ecc71,
   nephritis: #27ae60,
@@ -61,7 +61,7 @@ $padding-large-horizontal:  16px;
 // Media queries
 $screen-sm:  600px;
 $screen-md:  960px;
-$screen-lg:  1140px;
+$screen-lg:  1200px;
 
 // Sidebar
 $sidebarWidth:  440px;
@@ -70,18 +70,21 @@ $animationSpeed:  325ms;
 
 // fonticon
 $icomoon-font-path: "../fonts";
-$icon-office: "\e903";
-$icon-phone: "\e942";
-$icon-envelop: "\e945";
-$icon-location: "\e947";
-$icon-user: "\e971";
-$icon-briefcase: "\e9ae";
-$icon-cross: "\ea0f";
-$icon-checkmark: "\ea10";
-$icon-checkbox-checked: "\ea52";
-$icon-checkbox-unchecked: "\ea53";
-$icon-radio-checked: "\ea55";
-$icon-radio-unchecked: "\ea56";
+$icon-search: \e986;
+$icon-plus: \ea0a;
+$icon-office: \e903;
+$icon-phone: \e942;
+$icon-envelop: \e945;
+$icon-location: \e947;
+$icon-user: \e971;
+$icon-briefcase: \e9ae;
+$icon-cross: \ea0f;
+$icon-checkmark: \ea10;
+$icon-checkbox-checked: \ea52;
+$icon-checkbox-unchecked: \ea53;
+$icon-radio-checked: \ea55;
+$icon-radio-unchecked: \ea56;
+$icon-enlarge: \e98b;
 
 // Form elements
 // $form: (

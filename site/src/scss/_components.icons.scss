@@ -30,63 +30,82 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+.icon-enlarge {
+  &:before {
+    content: unicode($icon-enlarge);
+  }
+}
+.icon-search {
+  &:before {
+    content: unicode($icon-search);
+  }
+}
+.icon-plus {
+  &:before {
+    content: unicode($icon-plus);
+  }
+}
 .icon-office {
   &:before {
-    content: $icon-office;
+    content: unicode($icon-office);
   }
 }
 .icon-phone {
   &:before {
-    content: $icon-phone;
+    content: unicode($icon-phone);
   }
 }
 .icon-envelop {
   &:before {
-    content: $icon-envelop;
+    content: unicode($icon-envelop);
   }
 }
 .icon-location {
   &:before {
-    content: $icon-location;
+    content: unicode($icon-location);
   }
 }
 .icon-user {
   &:before {
-    content: $icon-user;
+    content: unicode($icon-user);
   }
 }
 .icon-briefcase {
   &:before {
-    content: $icon-briefcase;
+    content: unicode($icon-briefcase);
   }
 }
 .icon-cross {
   &:before {
-    content: $icon-cross;
+    content: unicode($icon-cross);
   }
 }
 .icon-checkmark {
   &:before {
-    content: $icon-checkmark;
+    content: unicode($icon-checkmark);
   }
 }
 .icon-checkbox-checked {
   &:before {
-    content: $icon-checkbox-checked;
+    content: unicode($icon-checkbox-checked);
   }
 }
 .icon-checkbox-unchecked {
   &:before {
-    content: $icon-checkbox-unchecked;
+    content: unicode($icon-checkbox-unchecked);
   }
 }
 .icon-radio-checked {
   &:before {
-    content: $icon-radio-checked;
+    content: unicode($icon-radio-checked);
   }
 }
 .icon-radio-unchecked {
   &:before {
-    content: $icon-radio-unchecked;
+    content: unicode($icon-radio-unchecked);
   }
 }
