@@ -31,7 +31,6 @@ body {
         @include fontSize(16px);
         text-decoration: none;
         text-transform: uppercase;
-        // background-color: color(brown);
         color: color(gray);
         transition: background ease-in 485ms;
 
@@ -62,38 +61,21 @@ body {
     }
 }
 
-.flex {
-  min-height: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  &-item {
-    flex: 0 0 auto;
-    //margin: 6px;
-    margin: $gutter/2;
-    width: 360px;
-  }
-}
-.flex:after {
-  display: block;
-  content: " invisible node "
-  flex(999 999 auto)
-}
-
 .section {
     background-color: color(text-bg);
     padding-top: $gutter;
     padding-bottom: $gutter;
     @include fontSize(20px);
     line-height: 1.6;
-    >.container {
-        max-width: 750px;
+    @include breakpoint($screen-lg) {
+        >.container {
+            max-width: 750px;
+        }
     }
     &.bg-darker {
         background-color: #c8e6c9;
+        border-top: 1px solid darken(#c8e6c9, 7%);
+        border-bottom: 1px solid darken(#c8e6c9, 7%);
     }
     .list-horizontal {
         margin: 0;
@@ -214,6 +196,16 @@ body {
     @include button-variant(color(black), transparent, color(black))
 }
 
+.btn-fake {
+    display: inline-block;
+    padding: 7px 30px;
+    border: 2px solid #c8e6c9;
+    border-radius: $border-radius-small;
+    color: color(text);
+    @include fontSize(16px);
+    margin: calculateRem(20px) 0 calculateRem(10px) 0;
+}
+
 .btn-block {
     width: 100%;
 }
@@ -231,9 +223,13 @@ a[href^="mailto"] {
     padding-left: 0;
     text-align: center;
     > li {
-        display: inline-block;
         margin: 0 $gutter/2;
+        @include breakpoint($screen-sm) {
+            display: inline-block;
+
+        }
     }
+
 }
 // Hero
 .hero {
@@ -263,36 +259,35 @@ a[href^="mailto"] {
 }
 // categories
 .cat {
-    .flex {
-        margin: 0 auto;
-        @include breakpoint($screen-md) {
-            max-width: calculateRem(960px);
-        }
-        @include breakpoint($screen-lg) {
-            max-width: calculateRem(1140px);
-        }
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    &:after {
+      display: block;
+      content: " invisible node "
+      flex(999 999 auto)
     }
-    &-item {
-        background: white;
-        text-decoration: none;
-        border-bottom: 2px solid #c9c7c7;
-        // transition: border .4s ease-in;
-        position: relative;
-        width: 90%;
+    // &-filter {
+        // .cat-item {
+        //     @include breakpoint($screen-md) {
+        //         width: 20%;
+        //     }
+        // }
+    //     // .cat-item {
+    //     //     display: none;
+    //     // }
+    //     .show {
+    //         display: block;
+    //     }
+    // }
+    &-item-media {
         height: 173px;
-        @include breakpoint($screen-md) {
-            width: 45%;
-        }
-        @include breakpoint($screen-lg) {
-            width: 30%;
-        }
-        &:before {
-            content: ' ';
-            transform: scale(0);
-            // height: 40px;
-        }
+        overflow: hidden;
         &:hover {
-            text-decoration: none;
             &:before {
                 @extend %icomoon;
                 content: unicode($icon-enlarge);
@@ -307,15 +302,39 @@ a[href^="mailto"] {
                 transform: scale(1);
                 transition: transform .1s linear;
                 z-index: 999;
-
             }
+        }
+
+    }
+    &-item {
+        background: white;
+        text-decoration: none;
+        border-bottom: 2px solid #c9c7c7;
+        position: relative;
+        width: 90%;
+        flex: 0 0 auto;
+        margin: $gutter/2;
+        padding: calculateRem(12px);
+        @include breakpoint($screen-md) {
+            width: 45%;
+        }
+        @include breakpoint($screen-lg) {
+            width: 30%;
+        }
+        &:before {
+            content: ' ';
+            transform: scale(0);
+            // height: 40px;
+        }
+        &:hover {
+            text-decoration: none;
             .cat-title {
                 text-decoration: none;
             }
         }
     }
     &-title {
-        margin: calculateRem(20px) 0 calculateRem(5px) 0;
+        margin: calculateRem(10px) 0 calculateRem(5px) 0;
         color: #00796b;
         text-transform: uppercase;
         text-decoration: underline;
@@ -324,23 +343,21 @@ a[href^="mailto"] {
     &-text {
         margin: 0;
         color: #727272;
-        @include fontSize(14px);
-        @include breakpoint($screen-lg) {
-            @include fontSize(16px);
-
-        }
+        @include fontSize(16px);
     }
     &-media {
         position: absolute;
         left: 0;
         top: 0;
-        // float: left;
-        // margin-right: calculateRem(20px);
         & ~ * {
-            padding-left: 160px;
+            padding-left: 150px;
         }
     }
 }
+
+
+
+
 // Pages
 body {
     &#home {

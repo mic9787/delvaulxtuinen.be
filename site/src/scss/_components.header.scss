@@ -1,6 +1,28 @@
 .header {
-
+    text-align: center;
+    @include breakpoint($screen-sm) {
+        text-align: left;
+    }
 }
 .nav {
-    float: right;
+    margin: 0 0 1rem 0;
+    @include breakpoint($screen-sm) {
+        float: right;
+        margin: $gutter/2 0;
+    }
+    &-item {
+        color: color(text);
+        text-decoration: none;
+        @include fontSize(14px);
+        padding: 0 calculateRem(6px);
+        &.active {
+            text-decoration: underline;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+        #{$hoverstate} {
+            text-decoration: underline;
+        }
+    }
 }

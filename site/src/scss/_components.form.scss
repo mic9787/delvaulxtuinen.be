@@ -163,8 +163,9 @@ input[type="radio"].radiobtn {
       padding: 0;
       width: 100%;
         &:before {
+
             @extend %icomoon;
-            content: $icon-radio-unchecked;
+            content: unicode($icon-radio-unchecked);
             margin: 0 5px 0 0;
             font-size: calculateRem(20px);
             position: relative;
@@ -174,7 +175,7 @@ input[type="radio"].radiobtn {
     }
     &:checked + label {
         &:before {
-            content: $icon-radio-checked;
+            content: unicode($icon-radio-checked);
         }
     }
 }
